@@ -1,0 +1,35 @@
+name: kashpirev-practice08
+services:
+  broker:
+    image: rabbitmq:4-management-alpine
+    environment: {RABBITMQ_DEFAULT_USER: student, RABBITMQ_DEFAULT_PASS: "${BROKER_PASSWORD:-local-demo-1123}"}
+    volumes: ["broker-data:/var/lib/rabbitmq"]
+    healthcheck: {test: ["CMD", "rabbitmq-diagnostics", "-q", "ping"], interval: 5s, timeout: 5s, retries: 30}
+  supplier:
+    build: ./supplier-service
+    environment: {PORT: 8080, BROKER_HOST: broker, BROKER_USER: student, BROKER_PASSWORD: "${BROKER_PASSWORD:-local-demo-1123}", SUPPLIER_URL: "http://supplier:8080", ORDER_URL: "http://orders:8080", DELIVERY_URL: "http://deliveries:8080", DB_URL: "jdbc:h2:file:/data/supplier;DB_CLOSE_ON_EXIT=FALSE"}
+    volumes: ["supplier-data:/data"]
+    healthcheck: {test: ["CMD", "curl", "-fsS", "http://localhost:8080/actuator/health"], interval: 5s, timeout: 4s, retries: 40, start_period: 35s}
+  orders:
+    build: ./order-service
+    environment: {PORT: 8080, BROKER_HOST: broker, BROKER_USER: student, BROKER_PASSWORD: "${BROKER_PASSWORD:-local-demo-1123}", SUPPLIER_URL: "http://supplier:8080", ORDER_URL: "http://orders:8080", DELIVERY_URL: "http://deliveries:8080", DB_URL: "jdbc:h2:file:/data/orders;DB_CLOSE_ON_EXIT=FALSE"}
+    volumes: ["orders-data:/data"]
+    depends_on: {broker: {condition: service_healthy}}
+    healthcheck: {test: ["CMD", "curl", "-fsS", "http://localhost:8080/actuator/health"], interval: 5s, timeout: 4s, retries: 40, start_period: 35s}
+  deliveries:
+    build: ./delivery-service
+    environment: {PORT: 8080, BROKER_HOST: broker, BROKER_USER: student, BROKER_PASSWORD: "${BROKER_PASSWORD:-local-demo-1123}", SUPPLIER_URL: "http://supplier:8080", ORDER_URL: "http://orders:8080", DELIVERY_URL: "http://deliveries:8080", DB_URL: "jdbc:h2:file:/data/deliveries;DB_CLOSE_ON_EXIT=FALSE"}
+    volumes: ["deliveries-data:/data"]
+    depends_on: {broker: {condition: service_healthy}}
+    healthcheck: {test: ["CMD", "curl", "-fsS", "http://localhost:8080/actuator/health"], interval: 5s, timeout: 4s, retries: 40, start_period: 35s}
+  gateway:
+    build: ./api-gateway
+    environment: {PORT: 8080, BROKER_HOST: broker, BROKER_USER: student, BROKER_PASSWORD: "${BROKER_PASSWORD:-local-demo-1123}", SUPPLIER_URL: "http://supplier:8080", ORDER_URL: "http://orders:8080", DELIVERY_URL: "http://deliveries:8080"}
+    ports: ["127.0.0.1:8188:8080"]
+    depends_on: {supplier: {condition: service_healthy}, orders: {condition: service_healthy}, deliveries: {condition: service_healthy}}
+    healthcheck: {test: ["CMD", "curl", "-fsS", "http://localhost:8080/actuator/health"], interval: 5s, timeout: 4s, retries: 40, start_period: 35s}
+volumes:
+  broker-data:
+  supplier-data:
+  orders-data:
+  deliveries-data:

@@ -1,0 +1,216 @@
+ Image kashpirev-practice08-deliveries Building 
+ Image kashpirev-practice08-gateway Building 
+ Image kashpirev-practice08-supplier Building 
+ Image kashpirev-practice08-orders Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 3.11kB 0.1s done
+#1 DONE 0.1s
+
+#2 [supplier internal] load build definition from Dockerfile
+#2 transferring dockerfile: 209B 0.0s done
+#2 DONE 0.1s
+
+#3 [gateway internal] load build definition from Dockerfile
+#3 transferring dockerfile: 209B done
+#3 DONE 0.1s
+
+#4 [gateway internal] load metadata for docker.io/library/eclipse-temurin:21-jdk-alpine
+#4 ...
+
+#5 [orders internal] load build definition from Dockerfile
+#5 transferring dockerfile: 209B done
+#5 DONE 0.1s
+
+#6 [deliveries internal] load build definition from Dockerfile
+#6 transferring dockerfile: 209B done
+#6 DONE 0.1s
+
+#4 [deliveries internal] load metadata for docker.io/library/eclipse-temurin:21-jdk-alpine
+#4 DONE 0.3s
+
+#7 [deliveries internal] load .dockerignore
+#7 transferring context: 66B done
+#7 DONE 0.0s
+
+#8 [gateway internal] load .dockerignore
+#8 transferring context: 66B done
+#8 DONE 0.1s
+
+#9 [orders internal] load .dockerignore
+#9 transferring context: 66B done
+#9 DONE 0.1s
+
+#10 [supplier internal] load .dockerignore
+#10 transferring context: 66B done
+#10 DONE 0.1s
+
+#11 [gateway internal] load build context
+#11 ...
+
+#12 [orders 1/4] FROM docker.io/library/eclipse-temurin:21-jdk-alpine@sha256:0bfc69a4758a86710e5c474032d28400a8bd00874766f9e8b1642ac2fd293159
+#12 resolve docker.io/library/eclipse-temurin:21-jdk-alpine@sha256:0bfc69a4758a86710e5c474032d28400a8bd00874766f9e8b1642ac2fd293159 0.1s done
+#12 DONE 0.1s
+
+#11 [gateway internal] load build context
+#11 transferring context: 26.43MB 3.6s done
+#11 DONE 3.6s
+
+#13 [deliveries internal] load build context
+#13 ...
+
+#14 [deliveries 2/4] RUN apk add --no-cache curl
+#14 CACHED
+
+#15 [supplier 3/4] WORKDIR /app
+#15 CACHED
+
+#13 [deliveries internal] load build context
+#13 transferring context: 30.47MB 3.9s done
+#13 DONE 3.9s
+
+#16 [supplier internal] load build context
+#16 transferring context: 28.20MB 3.8s done
+#16 DONE 3.8s
+
+#17 [supplier 4/4] COPY target/app.jar app.jar
+#17 ...
+
+#18 [gateway 4/4] COPY target/app.jar app.jar
+#18 DONE 0.8s
+
+#19 [orders internal] load build context
+#19 transferring context: 34.04MB 4.4s done
+#19 DONE 4.5s
+
+#20 [gateway] exporting to image
+#20 exporting layers
+#20 ...
+
+#17 [supplier 4/4] COPY target/app.jar app.jar
+#17 DONE 1.5s
+
+#21 [orders 4/4] COPY target/app.jar app.jar
+#21 ...
+
+#22 [deliveries 4/4] COPY target/app.jar app.jar
+#22 DONE 2.2s
+
+#21 [orders 4/4] COPY target/app.jar app.jar
+#21 DONE 1.9s
+
+#23 [orders] exporting to image
+#23 ...
+
+#20 [gateway] exporting to image
+#20 exporting layers 2.9s done
+#20 exporting manifest sha256:465cdd396d3d0dadcf8113e4da0300e1fe3b4d768c7238a71e773f1a8001bde7 0.0s done
+#20 exporting config sha256:47578f49fd4dedf8a1ce2f4cd867d3f08d66e0afa9879798300855f926d9429e 0.0s done
+#20 exporting attestation manifest sha256:3925af96c7c6151478412cac5a89297ada905366a4acd76f8cbe656ed1cbf8a0 0.1s done
+#20 exporting manifest list sha256:9167a4277e246ded12fdc3297927729a1bf269f24dbe1e88b02efd7334b6387e 0.1s done
+#20 naming to docker.io/library/kashpirev-practice08-gateway:latest 0.0s done
+#20 unpacking to docker.io/library/kashpirev-practice08-gateway:latest 0.3s done
+#20 DONE 3.7s
+
+#24 [supplier] exporting to image
+#24 exporting layers 1.8s done
+#24 exporting manifest sha256:9aa90f95f9e55fb372270993c38507688e5fa3a2b3b80ff93c71aae0e9c4d821 0.0s done
+#24 exporting config sha256:29e5125dea9c2263480e7b86b7e62a732434ff0228c64d9aa9202d95328d87e2 0.2s done
+#24 exporting attestation manifest sha256:9a54cef491da458310fe994f62c4ad2c14cf6367d53c04c715c80bfe24e9bb57 0.2s done
+#24 exporting manifest list sha256:5d532e3345204b0a0a5efd942e9918b61ab148ab02285efb5355624a32121395
+#24 exporting manifest list sha256:5d532e3345204b0a0a5efd942e9918b61ab148ab02285efb5355624a32121395 0.1s done
+#24 naming to docker.io/library/kashpirev-practice08-supplier:latest
+#24 naming to docker.io/library/kashpirev-practice08-supplier:latest 0.0s done
+#24 unpacking to docker.io/library/kashpirev-practice08-supplier:latest
+#24 unpacking to docker.io/library/kashpirev-practice08-supplier:latest 0.4s done
+#24 DONE 3.0s
+
+#23 [orders] exporting to image
+#23 exporting layers 2.0s done
+#23 exporting manifest sha256:b18504b6ea9ed41b6dc6e3d1ed5da300f38d332435a656372da462cdb0fdd716 0.1s done
+#23 exporting config sha256:b1d0748ce68dcf7ecc604f5bdd4562c535d757dfa86a007391c15558db8bbd3d 0.1s done
+#23 exporting attestation manifest sha256:9daa2898fda82a15b09bcf3618567d0f25dcb86401548e61602a6e59621c5db9 0.2s done
+#23 exporting manifest list sha256:37c60b473906fcf9ad2fd43150c2a818dbcbb173fdf8bd6598c127653fbc5495
+#23 exporting manifest list sha256:37c60b473906fcf9ad2fd43150c2a818dbcbb173fdf8bd6598c127653fbc5495 0.1s done
+#23 naming to docker.io/library/kashpirev-practice08-orders:latest 0.1s done
+#23 unpacking to docker.io/library/kashpirev-practice08-orders:latest
+#23 ...
+
+#25 [deliveries] exporting to image
+#25 exporting layers 1.9s done
+#25 exporting manifest sha256:0047e55e375fc5bf1d027bd64e1810cf2f40f6667e801aa655d8d92d109f793e 0.1s done
+#25 exporting config sha256:112f49fc3f43441cd206f9da6b52b5b0217a902322e213bd36cd21518495a2e2 0.1s done
+#25 exporting attestation manifest sha256:72bbcfbb6cfcc9c67dbec539146a431a6e92c58143ff1f78e0ebae53c3351784 0.2s done
+#25 exporting manifest list sha256:31aef449eb35d3f14d879b63d4739f26a9a368c965bcb1a9d1d65ae10a0bc19d 0.1s done
+#25 naming to docker.io/library/kashpirev-practice08-deliveries:latest 0.1s done
+#25 unpacking to docker.io/library/kashpirev-practice08-deliveries:latest 0.3s done
+#25 DONE 3.0s
+
+#26 [gateway] resolving provenance for metadata file
+#26 DONE 0.0s
+
+#27 [supplier] resolving provenance for metadata file
+#27 DONE 0.0s
+
+#23 [orders] exporting to image
+#23 unpacking to docker.io/library/kashpirev-practice08-orders:latest 0.4s done
+#23 DONE 3.1s
+
+#28 [deliveries] resolving provenance for metadata file
+#28 DONE 0.1s
+
+#29 [orders] resolving provenance for metadata file
+#29 DONE 0.0s
+ Image kashpirev-practice08-gateway Built 
+ Image kashpirev-practice08-deliveries Built 
+ Image kashpirev-practice08-orders Built 
+ Image kashpirev-practice08-supplier Built 
+ Network kashpirev-practice08_default Creating 
+ Network kashpirev-practice08_default Created 
+ Volume kashpirev-practice08_deliveries-data Creating 
+ Volume kashpirev-practice08_deliveries-data Created 
+ Volume kashpirev-practice08_broker-data Creating 
+ Volume kashpirev-practice08_broker-data Created 
+ Volume kashpirev-practice08_supplier-data Creating 
+ Volume kashpirev-practice08_supplier-data Created 
+ Volume kashpirev-practice08_orders-data Creating 
+ Volume kashpirev-practice08_orders-data Created 
+ Container kashpirev-practice08-supplier-1 Creating 
+ Container kashpirev-practice08-broker-1 Creating 
+ Container kashpirev-practice08-broker-1 Created 
+ Container kashpirev-practice08-deliveries-1 Creating 
+ Container kashpirev-practice08-orders-1 Creating 
+ Container kashpirev-practice08-supplier-1 Created 
+ Container kashpirev-practice08-orders-1 Created 
+ Container kashpirev-practice08-deliveries-1 Created 
+ Container kashpirev-practice08-gateway-1 Creating 
+ Container kashpirev-practice08-gateway-1 Created 
+ Container kashpirev-practice08-broker-1 Starting 
+ Container kashpirev-practice08-supplier-1 Starting 
+ Container kashpirev-practice08-supplier-1 Started 
+ Container kashpirev-practice08-broker-1 Started 
+ Container kashpirev-practice08-broker-1 Waiting 
+ Container kashpirev-practice08-broker-1 Waiting 
+ Container kashpirev-practice08-broker-1 Healthy 
+ Container kashpirev-practice08-deliveries-1 Starting 
+ Container kashpirev-practice08-broker-1 Healthy 
+ Container kashpirev-practice08-orders-1 Starting 
+ Container kashpirev-practice08-orders-1 Started 
+ Container kashpirev-practice08-deliveries-1 Started 
+ Container kashpirev-practice08-deliveries-1 Waiting 
+ Container kashpirev-practice08-supplier-1 Waiting 
+ Container kashpirev-practice08-orders-1 Waiting 
+ Container kashpirev-practice08-supplier-1 Healthy 
+ Container kashpirev-practice08-deliveries-1 Healthy 
+ Container kashpirev-practice08-orders-1 Healthy 
+ Container kashpirev-practice08-gateway-1 Starting 
+ Container kashpirev-practice08-gateway-1 Started 
+ Container kashpirev-practice08-deliveries-1 Waiting 
+ Container kashpirev-practice08-gateway-1 Waiting 
+ Container kashpirev-practice08-broker-1 Waiting 
+ Container kashpirev-practice08-supplier-1 Waiting 
+ Container kashpirev-practice08-orders-1 Waiting 
+ Container kashpirev-practice08-orders-1 Healthy 
+ Container kashpirev-practice08-broker-1 Healthy 
+ Container kashpirev-practice08-deliveries-1 Healthy 
+ Container kashpirev-practice08-supplier-1 Healthy 
+ Container kashpirev-practice08-gateway-1 Healthy 

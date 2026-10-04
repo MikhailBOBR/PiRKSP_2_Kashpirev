@@ -1,0 +1,1 @@
+CREATE TABLE IF NOT EXISTS deliveries(order_id BIGINT PRIMARY KEY,product VARCHAR(120),address VARCHAR(240),status VARCHAR(30));

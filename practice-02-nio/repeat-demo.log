@@ -1,0 +1,17 @@
+Каталог существовал: true
+Кашпирев Михаил Дмитриевич | ИКБО-11-23 | Java NIO
+LIST incoming:
+supply-01.csv | 103 bytes | modified 2026-10-04T15:01:34.2973577Z
+supply-02.csv | 110 bytes | modified 2026-10-04T15:01:34.2978957Z
+supply-03.csv | 112 bytes | modified 2026-10-04T15:01:34.2978957Z
+Reader: FileChannel + ByteBuffer (1024 bytes)
+FILE 4118267696600-supply-01.csv | Size: 103 bytes | SHA-256: 951d44b0c7abc99040f2c5109a45f0df32c8d6b72693e140a028736651861fe1 | Status: processed | available=1 | totals={11=63200.00}
+Reader: Files.readAllLines UTF-8
+FILE 4118279889000-supply-02.csv | Size: 110 bytes | SHA-256: dd2daa1d2c5cfc4fa32ca7ecf86524012efc5d62e9839b9c4a5e36a0248435e2 | Status: processed | available=2 | totals={22=116400.00}
+Reader: Files.readAllLines UTF-8
+FILE 4118282077400-supply-03.csv | Size: 112 bytes | SHA-256: f47307622dfc576d5559a203810ccb33b5e409ce60e7a73ee1c3f484f5c115d4 | Status: processed | available=2 | totals={33=265000.00}
+WatchService START: C:\Users\Михаил\Documents\Codex\2026-10-04\plugin-browser-openai-bundled-x20\outputs\Кашпирев_МД_ИКБО-11-23\practice-02-nio\data\incoming
+Обнаружен новый файл: supply-live.csv [ENTRY_CREATE]
+Reader: Files.readAllLines UTF-8
+FILE 4120626058200-supply-live.csv | Size: 73 bytes | SHA-256: d0ad236c5a6f4c3395eeaeb215c4bc530e00f9eaab62e512cc1ef73ea35a1458 | Status: processed | available=1 | totals={44=24500.00}
+WatchService STOP

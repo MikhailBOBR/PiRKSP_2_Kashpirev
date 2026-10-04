@@ -1,0 +1,2 @@
+CREATE TABLE IF NOT EXISTS deliveries(order_id VARCHAR(40) PRIMARY KEY,event_id VARCHAR(40) UNIQUE,address VARCHAR(240),status VARCHAR(30),request_id VARCHAR(80),synced BOOLEAN);
+CREATE TABLE IF NOT EXISTS processed_events(event_id VARCHAR(40) PRIMARY KEY);

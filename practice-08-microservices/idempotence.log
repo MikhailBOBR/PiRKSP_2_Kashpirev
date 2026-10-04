@@ -1,0 +1,7 @@
+REPUBLISH identical OrderCreated
+eventId=c5212757-dfc8-469d-bffd-a15da1d68087
+orderId=b73d13eb-6acd-4646-86cf-66d483bfe570
+RabbitMQ response {"routed":true}
+Deliveries before=2 after=2
+Matching order_id rows=1
+deliveries-1  | requestId=kashpirev-1123-1791128268 DUPLICATE ignored eventId=c5212757-dfc8-469d-bffd-a15da1d68087

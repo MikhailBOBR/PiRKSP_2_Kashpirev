@@ -1,0 +1,35 @@
+name: kashpirev-practice05
+services:
+  traefik:
+    image: traefik:v3.6.1
+    command: ["--providers.docker=true", "--providers.docker.exposedbydefault=false", "--entrypoints.web.address=:80", "--ping=true"]
+    ports: ["127.0.0.1:8155:80"]
+    volumes: ["/var/run/docker.sock:/var/run/docker.sock:ro"]
+    healthcheck: {test: ["CMD", "traefik", "healthcheck", "--ping"], interval: 5s, timeout: 3s, retries: 20}
+  orders-db:
+    image: postgres:16-alpine
+    environment: {POSTGRES_DB: orders, POSTGRES_USER: student, POSTGRES_PASSWORD: "${DB_PASSWORD:-local-demo-1123}"}
+    volumes: ["orders-data:/var/lib/postgresql/data", "./order-service/src/main/resources/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro"]
+    healthcheck: {test: ["CMD-SHELL", "pg_isready -U student -d orders"], interval: 5s, timeout: 3s, retries: 20}
+  orders:
+    build: ./order-service
+    environment: {PORT: 8080, DB_URL: "jdbc:postgresql://orders-db:5432/orders", DB_USER: student, DB_PASSWORD: "${DB_PASSWORD:-local-demo-1123}", SPRING_SQL_INIT_MODE: never}
+    depends_on: {orders-db: {condition: service_healthy}}
+    healthcheck: {test: ["CMD", "curl", "-fsS", "http://localhost:8080/actuator/health"], interval: 5s, timeout: 3s, retries: 30, start_period: 30s}
+    labels:
+      traefik.enable: "true"
+      traefik.http.routers.orders.rule: "PathPrefix(`/api/orders`)"
+      traefik.http.services.orders.loadbalancer.server.port: "8080"
+  deliveries:
+    build: ./delivery-service
+    environment: {PORT: 8080, ORDER_URL: "http://orders:8080", DB_URL: "jdbc:h2:file:/data/deliveries;DB_CLOSE_ON_EXIT=FALSE"}
+    volumes: ["deliveries-data:/data"]
+    depends_on: {orders: {condition: service_healthy}}
+    healthcheck: {test: ["CMD", "curl", "-fsS", "http://localhost:8080/actuator/health"], interval: 5s, timeout: 3s, retries: 30, start_period: 30s}
+    labels:
+      traefik.enable: "true"
+      traefik.http.routers.deliveries.rule: "PathPrefix(`/api/deliveries`)"
+      traefik.http.services.deliveries.loadbalancer.server.port: "8080"
+volumes:
+  orders-data:
+  deliveries-data:

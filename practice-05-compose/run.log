@@ -1,0 +1,221 @@
+ Image traefik:v3.6.1 Pulling 
+ e12cf03b5b74 Pulling fs layer 0B
+ 43a5be716dde Pulling fs layer 0B
+ 2d35ebdb57d9 Pulling fs layer 0B
+ bc116d93e45b Pulling fs layer 0B
+ 6397e1ae0137 Download complete 0B
+ 6670fb0d4099 Download complete 0B
+ e12cf03b5b74 Downloading 369B
+ e12cf03b5b74 Download complete 0B
+ 43a5be716dde Downloading 1.049MB
+ 43a5be716dde Downloading 3.146MB
+ 43a5be716dde Downloading 4.194MB
+ 43a5be716dde Downloading 5.243MB
+ 43a5be716dde Downloading 5.243MB
+ 43a5be716dde Downloading 5.243MB
+ 43a5be716dde Downloading 7.34MB
+ 2d35ebdb57d9 Downloading 1.049MB
+ bc116d93e45b Download complete 0B
+ 43a5be716dde Downloading 8.389MB
+ 2d35ebdb57d9 Downloading 2.097MB
+ 2d35ebdb57d9 Downloading 3.146MB
+ 43a5be716dde Downloading 8.389MB
+ 43a5be716dde Downloading 9.437MB
+ 2d35ebdb57d9 Download complete 0B
+ 2d35ebdb57d9 Extracting 1B
+ 43a5be716dde Downloading 11.53MB
+ 2d35ebdb57d9 Extracting 1B
+ 43a5be716dde Downloading 12.58MB
+ 2d35ebdb57d9 Extracting 1B
+ 43a5be716dde Downloading 14.68MB
+ bc116d93e45b Extracting 1B
+ 2d35ebdb57d9 Pull complete 0B
+ 43a5be716dde Downloading 16.78MB
+ bc116d93e45b Extracting 1B
+ 43a5be716dde Downloading 17.83MB
+ bc116d93e45b Extracting 1B
+ 43a5be716dde Downloading 19.92MB
+ bc116d93e45b Extracting 1B
+ 43a5be716dde Downloading 22.02MB
+ bc116d93e45b Pull complete 0B
+ 43a5be716dde Downloading 24.12MB
+ 43a5be716dde Downloading 26.21MB
+ 43a5be716dde Downloading 28.31MB
+ 43a5be716dde Downloading 30.41MB
+ 43a5be716dde Downloading 31.46MB
+ 43a5be716dde Downloading 33.55MB
+ 43a5be716dde Downloading 35.65MB
+ 43a5be716dde Downloading 36.7MB
+ 43a5be716dde Downloading 38.8MB
+ 43a5be716dde Downloading 40.89MB
+ 43a5be716dde Downloading 44.04MB
+ 43a5be716dde Downloading 45.09MB
+ 43a5be716dde Downloading 47.43MB
+ 43a5be716dde Download complete 0B
+ 43a5be716dde Extracting 1B
+ 43a5be716dde Extracting 1B
+ 43a5be716dde Extracting 1B
+ 43a5be716dde Extracting 1B
+ 43a5be716dde Extracting 1B
+ 43a5be716dde Extracting 1B
+ 43a5be716dde Extracting 1B
+ 43a5be716dde Extracting 1B
+ 43a5be716dde Extracting 1B
+ 43a5be716dde Pull complete 0B
+ e12cf03b5b74 Pull complete 0B
+ Image traefik:v3.6.1 Pulled 
+ Image kashpirev-practice05-orders Building 
+ Image kashpirev-practice05-deliveries Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 1.58kB 0.0s done
+#1 DONE 0.0s
+
+#2 [orders internal] load build definition from Dockerfile
+#2 transferring dockerfile: 209B done
+#2 DONE 0.0s
+
+#3 [deliveries internal] load build definition from Dockerfile
+#3 transferring dockerfile: 209B done
+#3 DONE 0.0s
+
+#4 [deliveries internal] load metadata for docker.io/library/eclipse-temurin:21-jdk-alpine
+#4 DONE 4.3s
+
+#5 [deliveries internal] load .dockerignore
+#5 transferring context: 66B done
+#5 DONE 0.0s
+
+#6 [orders internal] load .dockerignore
+#6 transferring context: 66B done
+#6 DONE 0.0s
+
+#7 [orders 1/4] FROM docker.io/library/eclipse-temurin:21-jdk-alpine@sha256:0bfc69a4758a86710e5c474032d28400a8bd00874766f9e8b1642ac2fd293159
+#7 resolve docker.io/library/eclipse-temurin:21-jdk-alpine@sha256:0bfc69a4758a86710e5c474032d28400a8bd00874766f9e8b1642ac2fd293159 0.1s done
+#7 resolve docker.io/library/eclipse-temurin:21-jdk-alpine@sha256:0bfc69a4758a86710e5c474032d28400a8bd00874766f9e8b1642ac2fd293159 0.1s done
+#7 DONE 0.1s
+
+#8 [deliveries internal] load build context
+#8 ...
+
+#9 [orders internal] load build context
+#9 transferring context: 28.21MB 1.7s done
+#9 DONE 1.8s
+
+#10 [orders 2/4] RUN apk add --no-cache curl
+#10 CACHED
+
+#11 [orders 3/4] WORKDIR /app
+#11 CACHED
+
+#12 [orders 4/4] COPY target/app.jar app.jar
+#12 CACHED
+
+#8 [deliveries internal] load build context
+#8 ...
+
+#13 [orders] exporting to image
+#13 exporting layers done
+#13 exporting manifest sha256:5e37ec41f94c4fee9340d6ef64690a53cbe4a87f1223354277f3a472697ba321 done
+#13 exporting config sha256:8db40372ef86bbaab242c6a64786ca920f94f46a0876c4bac5fc334330624240 done
+#13 exporting attestation manifest sha256:fa6e3ed573b7884fb16e9f30abc9d6aec6b6dbf4487e0ad15b0286c3eb436a2f 0.1s done
+#13 exporting manifest list sha256:b462472bb8dec6b5e8ee4cae09676879a795d90d005b8010bd8eae53a5aa6ae8 0.0s done
+#13 naming to docker.io/library/kashpirev-practice05-orders:latest done
+#13 unpacking to docker.io/library/kashpirev-practice05-orders:latest 0.0s done
+#13 DONE 0.3s
+
+#8 [deliveries internal] load build context
+#8 ...
+
+#14 [orders] resolving provenance for metadata file
+#14 DONE 0.0s
+
+#8 [deliveries internal] load build context
+#8 transferring context: 28.21MB 2.3s done
+#8 DONE 2.3s
+
+#10 [deliveries 2/4] RUN apk add --no-cache curl
+#10 CACHED
+
+#11 [deliveries 3/4] WORKDIR /app
+#11 CACHED
+
+#15 [deliveries 4/4] COPY target/app.jar app.jar
+#15 CACHED
+
+#16 [deliveries] exporting to image
+#16 exporting layers done
+#16 exporting manifest sha256:ab14d1a4ce2351eaf608ecf70fc1cd59ebcba54d6d16470159c234cacc191713 done
+#16 exporting config sha256:069e22bad416ce31147820f70b97657ee1581d97005af021052dee4af8fc0bf3 done
+#16 exporting attestation manifest sha256:df85149801fa89840bcf5f1996a6fb674d9efb6fd6d5c7a18c31e28319027789
+#16 exporting attestation manifest sha256:df85149801fa89840bcf5f1996a6fb674d9efb6fd6d5c7a18c31e28319027789 0.1s done
+#16 exporting manifest list sha256:8762ee162df190dc158e639e63fb86e7796be1567afd33a52fda75aaa2bb24f2 0.0s done
+#16 naming to docker.io/library/kashpirev-practice05-deliveries:latest
+#16 naming to docker.io/library/kashpirev-practice05-deliveries:latest done
+#16 unpacking to docker.io/library/kashpirev-practice05-deliveries:latest 0.0s done
+#16 DONE 0.2s
+
+#17 [deliveries] resolving provenance for metadata file
+#17 DONE 0.0s
+ Image kashpirev-practice05-orders Built 
+ Image kashpirev-practice05-deliveries Built 
+ Container kashpirev-practice05-orders-db-1 Running 
+ Container kashpirev-practice05-traefik-1 Recreate 
+ Container kashpirev-practice05-orders-1 Recreate 
+ Container kashpirev-practice05-orders-2 Recreate 
+ Container kashpirev-practice05-traefik-1 Recreated 
+ Container kashpirev-practice05-orders-1 Recreated 
+ Container kashpirev-practice05-orders-2 Recreated 
+ Container kashpirev-practice05-deliveries-1 Recreate 
+ Container kashpirev-practice05-deliveries-1 Recreated 
+ Container kashpirev-practice05-traefik-1 Starting 
+ Container kashpirev-practice05-orders-db-1 Waiting 
+ Container kashpirev-practice05-traefik-1 Started 
+ Container kashpirev-practice05-orders-db-1 Healthy 
+ Container kashpirev-practice05-orders-1 Starting 
+ Container kashpirev-practice05-orders-1 Started 
+ Container kashpirev-practice05-orders-2 Starting 
+ Container kashpirev-practice05-orders-2 Started 
+ Container kashpirev-practice05-orders-1 Waiting 
+ Container kashpirev-practice05-orders-2 Waiting 
+ Container kashpirev-practice05-orders-1 Healthy 
+ Container kashpirev-practice05-orders-2 Healthy 
+ Container kashpirev-practice05-deliveries-1 Starting 
+ Container kashpirev-practice05-deliveries-1 Started 
+ Container kashpirev-practice05-deliveries-1 Waiting 
+ Container kashpirev-practice05-traefik-1 Waiting 
+ Container kashpirev-practice05-orders-db-1 Waiting 
+ Container kashpirev-practice05-orders-1 Waiting 
+ Container kashpirev-practice05-orders-2 Waiting 
+ Container kashpirev-practice05-traefik-1 Healthy 
+ Container kashpirev-practice05-orders-db-1 Healthy 
+ Container kashpirev-practice05-orders-1 Healthy 
+ Container kashpirev-practice05-orders-2 Healthy 
+ Container kashpirev-practice05-deliveries-1 Healthy 
+NAME                                IMAGE                             COMMAND                  SERVICE      CREATED          STATUS                    PORTS
+kashpirev-practice05-deliveries-1   kashpirev-practice05-deliveries   "java -Dfile.encodin…"   deliveries   19 seconds ago   Up 5 seconds (healthy)    
+kashpirev-practice05-orders-1       kashpirev-practice05-orders       "java -Dfile.encodin…"   orders       21 seconds ago   Up 17 seconds (healthy)   
+kashpirev-practice05-orders-2       kashpirev-practice05-orders       "java -Dfile.encodin…"   orders       21 seconds ago   Up 17 seconds (healthy)   
+kashpirev-practice05-orders-db-1    postgres:16-alpine                "docker-entrypoint.s…"   orders-db    4 minutes ago    Up 4 minutes (healthy)    5432/tcp
+kashpirev-practice05-traefik-1      traefik:v3.6.1                    "/entrypoint.sh --pr…"   traefik      21 seconds ago   Up 17 seconds (healthy)   127.0.0.1:8155->80/tcp
+{"orders":[{"id":101,"product":"SSD 1TB","quantity":8,"total":63200.0,"address":"Москва, ул. Академическая, 12"}],"instance":"79099fe78870"}
+{"instance":"3f80ebbacf7d","orders":[{"id":101,"product":"SSD 1TB","quantity":8,"total":63200.0,"address":"Москва, ул. Академическая, 12"}]}
+{"instance":"3f80ebbacf7d","orders":[{"id":101,"product":"SSD 1TB","quantity":8,"total":63200.0,"address":"Москва, ул. Академическая, 12"}]}
+{"orders":[{"id":101,"product":"SSD 1TB","quantity":8,"total":63200.0,"address":"Москва, ул. Академическая, 12"}],"instance":"79099fe78870"}
+{"instance":"3f80ebbacf7d","orders":[{"id":101,"product":"SSD 1TB","quantity":8,"total":63200.0,"address":"Москва, ул. Академическая, 12"}]}
+{"orders":[{"id":101,"product":"SSD 1TB","quantity":8,"total":63200.0,"address":"Москва, ул. Академическая, 12"}],"instance":"79099fe78870"}
+{"instance":"3f80ebbacf7d","orders":[{"id":101,"product":"SSD 1TB","quantity":8,"total":63200.0,"address":"Москва, ул. Академическая, 12"}]}
+{"orders":[{"id":101,"product":"SSD 1TB","quantity":8,"total":63200.0,"address":"Москва, ул. Академическая, 12"}],"instance":"79099fe78870"}
+{
+  "instance": "86f18b6af146",
+  "delivery": {
+    "ORDER_ID": 101,
+    "PRODUCT": "SSD 1TB",
+    "ADDRESS": "Москва, ул. Академическая, 12",
+    "STATUS": "CREATED"
+  }
+}
+3f80ebbacf7d0b1cdd811f8708d3206ea46d6d254dc8da9afb372a00c84ece5f
+{"orders":[{"id":101,"product":"SSD 1TB","quantity":8,"total":63200.0,"address":"Москва, ул. Академическая, 12"}],"instance":"79099fe78870"}
+{"orders":[{"id":101,"product":"SSD 1TB","quantity":8,"total":63200.0,"address":"Москва, ул. Академическая, 12"}],"instance":"79099fe78870"}
+{"orders":[{"id":101,"product":"SSD 1TB","quantity":8,"total":63200.0,"address":"Москва, ул. Академическая, 12"}],"instance":"79099fe78870"}
+3f80ebbacf7d0b1cdd811f8708d3206ea46d6d254dc8da9afb372a00c84ece5f

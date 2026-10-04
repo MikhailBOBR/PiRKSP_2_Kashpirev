@@ -1,0 +1,10 @@
+# Large archives are published as GitHub Release assets.
+Архивы/
+*.zip
+~$*
+.env
+.aws/
+.ssh/
+.docker/
+__pycache__/
+*.tmp

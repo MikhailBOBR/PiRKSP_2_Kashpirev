@@ -1,0 +1,4 @@
+name: kashpirev-practice04
+services:
+  rsocket-demo:
+    build: .

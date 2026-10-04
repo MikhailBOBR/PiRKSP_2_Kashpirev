@@ -1,0 +1,36 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------< ru.kashpirev:order-service >---------------------
+[INFO] Building order-service 1.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ order-service ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ order-service ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 1 source file with javac [debug parameters release 21] to target\classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ order-service ---
+[INFO] skip non existing resourceDirectory C:\Users\������\Documents\Codex\2026-10-04\plugin-browser-openai-bundled-x20\outputs\��������_��_����-11-23\practice-05-compose\order-service\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ order-service ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.5.2:test (default-test) @ order-service ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ order-service ---
+[INFO] Building jar: C:\Users\������\Documents\Codex\2026-10-04\plugin-browser-openai-bundled-x20\outputs\��������_��_����-11-23\practice-05-compose\order-service\target\app.jar
+[INFO] 
+[INFO] --- spring-boot:3.4.1:repackage (repackage) @ order-service ---
+[INFO] Replacing main artifact C:\Users\������\Documents\Codex\2026-10-04\plugin-browser-openai-bundled-x20\outputs\��������_��_����-11-23\practice-05-compose\order-service\target\app.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to C:\Users\������\Documents\Codex\2026-10-04\plugin-browser-openai-bundled-x20\outputs\��������_��_����-11-23\practice-05-compose\order-service\target\app.jar.original
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  6.839 s
+[INFO] Finished at: 2026-10-04T18:03:55+03:00
+[INFO] ------------------------------------------------------------------------

@@ -1,0 +1,8 @@
+<!doctype html><html lang="ru"><meta charset="utf-8"><title>Практика 4 — Fire and Forget и Channel</title><style>body{margin:32px auto;max-width:1180px;padding:0 28px;font:18px Arial;color:#17252d;background:#f6f8fa}h1{font-size:30px;line-height:1.2}p{color:#465761}pre{white-space:pre-wrap;overflow-wrap:anywhere;font:17px/1.5 Consolas,monospace;background:white;padding:22px;border:1px solid #cad5dc}footer{font-size:15px}</style><h1>Практическая работа 4<br>Fire and Forget и Channel</h1><p>Кашпирев Михаил Дмитриевич · ИКБО-11-23</p><p>Протокол фактического запуска программы · 4 октября 2026</p><pre>SERVER fire-and-forget event=DeliveryViewed:1
+2026-10-04T15:33:45.784130026Z [reactor-tcp-epoll-4] SERVER channel received=courier-ready
+2026-10-04T15:33:45.788012001Z [reactor-tcp-epoll-3] CLIENT CHANNEL ack:courier-ready
+2026-10-04T15:33:46.013721089Z [reactor-tcp-epoll-4] SERVER channel received=position:55.75,37.61
+2026-10-04T15:33:46.017136504Z [reactor-tcp-epoll-3] CLIENT CHANNEL ack:position:55.75,37.61
+2026-10-04T15:33:46.216937143Z [reactor-tcp-epoll-4] SERVER channel received=delivered
+2026-10-04T15:33:46.219742678Z [reactor-tcp-epoll-3] CLIENT CHANNEL ack:delivered
+2026-10-04T15:33:46.220419131Z [main] ALL FOUR MODELS COMPLETE</pre><footer>Исходные полные протоколы находятся рядом с проектом. Это представление сохранённого вывода программы.</footer></html>

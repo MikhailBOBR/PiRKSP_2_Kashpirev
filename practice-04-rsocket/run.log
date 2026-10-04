@@ -1,0 +1,83 @@
+ Image kashpirev-practice04-rsocket-demo Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 815B 0.1s done
+#1 DONE 0.1s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 258B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/eclipse-temurin:21-jdk-alpine
+#3 DONE 0.8s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 66B done
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 ...
+
+#6 [1/4] FROM docker.io/library/eclipse-temurin:21-jdk-alpine@sha256:0bfc69a4758a86710e5c474032d28400a8bd00874766f9e8b1642ac2fd293159
+#6 resolve docker.io/library/eclipse-temurin:21-jdk-alpine@sha256:0bfc69a4758a86710e5c474032d28400a8bd00874766f9e8b1642ac2fd293159 0.1s done
+#6 CACHED
+
+#7 [2/4] WORKDIR /app
+#7 DONE 0.1s
+
+#5 [internal] load build context
+#5 transferring context: 9.78MB 0.5s done
+#5 DONE 0.5s
+
+#8 [3/4] COPY target/classes ./classes
+#8 DONE 0.2s
+
+#9 [4/4] COPY target/dependency ./lib
+#9 DONE 0.3s
+
+#10 exporting to image
+#10 exporting layers
+#10 exporting layers 1.1s done
+#10 exporting manifest sha256:59c4671d64c734f621ead15ef99b08a70958f5536708ec5829ca73a9ccf796ab 0.1s done
+#10 exporting config sha256:d4040cb75d229e11ca90d2890def54ee96117da837cc9ffd54c2e20049c0ef52 0.0s done
+#10 exporting attestation manifest sha256:243de9ff0377d5edfad8e0bea92ea824894ecef496708fa63cd5d305654c18ff
+#10 exporting attestation manifest sha256:243de9ff0377d5edfad8e0bea92ea824894ecef496708fa63cd5d305654c18ff 0.1s done
+#10 exporting manifest list sha256:fdd55f6f0d17c991387185e685b3e9abc615a28d32c0cc4be747b81771d7f951 0.0s done
+#10 naming to docker.io/library/kashpirev-practice04-rsocket-demo:latest
+#10 naming to docker.io/library/kashpirev-practice04-rsocket-demo:latest done
+#10 unpacking to docker.io/library/kashpirev-practice04-rsocket-demo:latest
+#10 unpacking to docker.io/library/kashpirev-practice04-rsocket-demo:latest 0.2s done
+#10 DONE 1.6s
+
+#11 resolving provenance for metadata file
+#11 DONE 0.0s
+ Image kashpirev-practice04-rsocket-demo Built 
+ Network kashpirev-practice04_default Creating 
+ Network kashpirev-practice04_default Created 
+ Container kashpirev-practice04-rsocket-demo-1 Creating 
+ Container kashpirev-practice04-rsocket-demo-1 Created 
+Attaching to rsocket-demo-1
+ Container kashpirev-practice04-rsocket-demo-1 Starting 
+ Container kashpirev-practice04-rsocket-demo-1 Started 
+rsocket-demo-1  | 2026-10-04T15:33:42.069407284Z [main] Кашпирев Михаил Дмитриевич | ИКБО-11-23 | RSocket
+rsocket-demo-1  | 2026-10-04T15:33:43.953522239Z [reactor-tcp-epoll-4] SERVER request-response id=1
+rsocket-demo-1  | 2026-10-04T15:33:44.081525717Z [reactor-tcp-epoll-3] CLIENT RR {"id":1,"orderId":101,"product":"SSD 1TB","address":"Москва, ул. Академическая, 12","status":"CREATED"}
+rsocket-demo-1  | 2026-10-04T15:33:44.084366989Z [reactor-tcp-epoll-4] SERVER request-response id=999
+rsocket-demo-1  | 2026-10-04T15:33:44.089652350Z [reactor-tcp-epoll-3] CLIENT HANDLED Delivery not found: 999
+rsocket-demo-1  | 2026-10-04T15:33:44.098203388Z [reactor-tcp-epoll-4] SERVER request-stream id=1
+rsocket-demo-1  | 2026-10-04T15:33:44.475669170Z [reactor-tcp-epoll-3] CLIENT STREAM {"id":1,"orderId":101,"product":"SSD 1TB","address":"Москва, ул. Академическая, 12","status":"CREATED"}
+rsocket-demo-1  | 2026-10-04T15:33:44.829790952Z [reactor-tcp-epoll-3] CLIENT STREAM {"id":1,"orderId":101,"product":"SSD 1TB","address":"Москва, ул. Академическая, 12","status":"ACCEPTED"}
+rsocket-demo-1  | 2026-10-04T15:33:45.187165169Z [reactor-tcp-epoll-3] CLIENT STREAM {"id":1,"orderId":101,"product":"SSD 1TB","address":"Москва, ул. Академическая, 12","status":"IN_TRANSIT"}
+rsocket-demo-1  | 2026-10-04T15:33:45.565925504Z [reactor-tcp-epoll-3] CLIENT STREAM {"id":1,"orderId":101,"product":"SSD 1TB","address":"Москва, ул. Академическая, 12","status":"DELIVERED"}
+rsocket-demo-1  | 2026-10-04T15:33:45.571640800Z [reactor-tcp-epoll-4] SERVER fire-and-forget event=DeliveryViewed:1
+rsocket-demo-1  | 2026-10-04T15:33:45.784130026Z [reactor-tcp-epoll-4] SERVER channel received=courier-ready
+rsocket-demo-1  | 2026-10-04T15:33:45.788012001Z [reactor-tcp-epoll-3] CLIENT CHANNEL ack:courier-ready
+rsocket-demo-1  | 2026-10-04T15:33:46.013721089Z [reactor-tcp-epoll-4] SERVER channel received=position:55.75,37.61
+rsocket-demo-1  | 2026-10-04T15:33:46.017136504Z [reactor-tcp-epoll-3] CLIENT CHANNEL ack:position:55.75,37.61
+rsocket-demo-1  | 2026-10-04T15:33:46.216937143Z [reactor-tcp-epoll-4] SERVER channel received=delivered
+rsocket-demo-1  | 2026-10-04T15:33:46.219742678Z [reactor-tcp-epoll-3] CLIENT CHANNEL ack:delivered
+rsocket-demo-1  | 2026-10-04T15:33:46.220419131Z [main] ALL FOUR MODELS COMPLETE
+
+ Compose Stopping Aborting on container exit...
+[Krsocket-demo-1 exited with code 0
+ Container kashpirev-practice04-rsocket-demo-1 Stopping 
+ Container kashpirev-practice04-rsocket-demo-1 Stopped 

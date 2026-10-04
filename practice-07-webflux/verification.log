@@ -1,0 +1,23 @@
+POST /api/deliveries
+HTTP 201
+{"id":3,"orderId":101,"product":"USB Dock","address":"Moscow 12","status":"CREATED"}
+
+DELETE /api/deliveries/3
+HTTP 204
+
+
+GET deleted delivery
+HTTP 404
+{"timestamp":"2026-10-04T15:40:58.550+00:00","path":"/api/deliveries/3","status":404,"error":"Not Found","requestId":"5610c5cf-103","message":"Delivery not found"}
+
+GET missing delivery 999
+HTTP 404
+{"timestamp":"2026-10-04T15:40:58.556+00:00","path":"/api/deliveries/999","status":404,"error":"Not Found","requestId":"8b84186e-104","message":"Delivery not found"}
+
+PUT reverse transition DELIVERED -> CREATED
+HTTP 409
+{"timestamp":"2026-10-04T15:40:58.561+00:00","path":"/api/deliveries/1","status":409,"error":"Conflict","requestId":"6d8fbf22-105","message":"Invalid status transition"}
+
+POST invalid input
+HTTP 400
+{"timestamp":"2026-10-04T15:40:58.567+00:00","path":"/api/deliveries","status":400,"error":"Bad Request","requestId":"1acc59c3-106","message":"Invalid delivery"}

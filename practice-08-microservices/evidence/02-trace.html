@@ -1,0 +1,14 @@
+<!doctype html><html lang="ru"><meta charset="utf-8"><title>Практика 8 — Обмен событием и единый requestId</title><style>body{margin:32px auto;max-width:1180px;padding:0 28px;font:18px Arial;color:#17252d;background:#f6f8fa}h1{font-size:30px;line-height:1.2}p{color:#465761}pre{white-space:pre-wrap;overflow-wrap:anywhere;font:17px/1.5 Consolas,monospace;background:white;padding:22px;border:1px solid #cad5dc}footer{font-size:15px}</style><h1>Практическая работа 8<br>Обмен событием и единый requestId</h1><p>Кашпирев Михаил Дмитриевич · ИКБО-11-23</p><p>Протокол фактического запуска программы · 4 октября 2026</p><pre>orders-1      | requestId=kashpirev-1123-1791128268 Order calling Supplier breaker=CLOSED
+orders-1      | requestId=kashpirev-1123-1791128268 OrderCreated saved outbox eventId=c5212757-dfc8-469d-bffd-a15da1d68087 orderId=b73d13eb-6acd-4646-86cf-66d483bfe570
+orders-1      | requestId=kashpirev-1123-1791128268 PUBLISHED OrderCreated eventId=c5212757-dfc8-469d-bffd-a15da1d68087 queue=order.created
+orders-1      | requestId=kashpirev-1123-1791128268 Order status=DELIVERY_CREATED id=b73d13eb-6acd-4646-86cf-66d483bfe570
+orders-1      | requestId=kashpirev-1123-1791128268 Order status=IN_TRANSIT id=b73d13eb-6acd-4646-86cf-66d483bfe570
+orders-1      | requestId=kashpirev-1123-1791128268 Order status=DELIVERED id=b73d13eb-6acd-4646-86cf-66d483bfe570
+gateway-1     | requestId=kashpirev-1123-1791128268 Gateway -&gt; orders POST /api/orders
+deliveries-1  | requestId=kashpirev-1123-1791128268 CONSUMED OrderCreated eventId=c5212757-dfc8-469d-bffd-a15da1d68087 delivery orderId=b73d13eb-6acd-4646-86cf-66d483bfe570
+deliveries-1  | requestId=kashpirev-1123-1791128268 Delivery -&gt; Order synchronized status=DELIVERY_CREATED
+gateway-1     | requestId=kashpirev-1123-1791128268 Gateway -&gt; deliveries PUT /api/deliveries/b73d13eb-6acd-4646-86cf-66d483bfe570/status
+gateway-1     | requestId=kashpirev-1123-1791128268 Gateway -&gt; deliveries PUT /api/deliveries/b73d13eb-6acd-4646-86cf-66d483bfe570/status
+deliveries-1  | requestId=kashpirev-1123-1791128268 Delivery -&gt; Order synchronized status=IN_TRANSIT
+deliveries-1  | requestId=kashpirev-1123-1791128268 Delivery -&gt; Order synchronized status=DELIVERED
+supplier-1    | requestId=kashpirev-1123-1791128268 Supplier lookup product=1</pre><footer>Исходные полные протоколы находятся рядом с проектом. Это представление сохранённого вывода программы.</footer></html>

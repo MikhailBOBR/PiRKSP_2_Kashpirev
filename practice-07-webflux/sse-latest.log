@@ -1,0 +1,16 @@
+id:4:CREATED
+event:delivery-status
+data:{"id":4,"orderId":101,"product":"SSD 1TB","address":"Москва, ул. Академическая, 12","status":"CREATED"}
+
+id:4:ACCEPTED
+event:delivery-status
+data:{"id":4,"orderId":101,"product":"SSD 1TB","address":"Москва, ул. Академическая, 12","status":"ACCEPTED"}
+
+id:4:IN_TRANSIT
+event:delivery-status
+data:{"id":4,"orderId":101,"product":"SSD 1TB","address":"Москва, ул. Академическая, 12","status":"IN_TRANSIT"}
+
+id:4:DELIVERED
+event:delivery-status
+data:{"id":4,"orderId":101,"product":"SSD 1TB","address":"Москва, ул. Академическая, 12","status":"DELIVERED"}
+

@@ -1,0 +1,111 @@
+ Image kashpirev-practice05-deliveries Building 
+ Image kashpirev-practice05-orders Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 1.58kB 0.1s done
+#1 DONE 0.1s
+
+#2 [orders internal] load build definition from Dockerfile
+#2 transferring dockerfile: 209B done
+#2 DONE 0.0s
+
+#3 [deliveries internal] load build definition from Dockerfile
+#3 transferring dockerfile: 209B 0.0s done
+#3 DONE 0.0s
+
+#4 [deliveries internal] load metadata for docker.io/library/eclipse-temurin:21-jdk-alpine
+#4 DONE 0.8s
+
+#5 [deliveries internal] load .dockerignore
+#5 transferring context: 66B done
+#5 DONE 0.0s
+
+#6 [orders internal] load .dockerignore
+#6 transferring context: 66B done
+#6 DONE 0.0s
+
+#7 [orders 1/4] FROM docker.io/library/eclipse-temurin:21-jdk-alpine@sha256:0bfc69a4758a86710e5c474032d28400a8bd00874766f9e8b1642ac2fd293159
+#7 resolve docker.io/library/eclipse-temurin:21-jdk-alpine@sha256:0bfc69a4758a86710e5c474032d28400a8bd00874766f9e8b1642ac2fd293159 0.0s done
+#7 DONE 0.0s
+
+#8 [deliveries internal] load build context
+#8 transferring context: 28.21MB 1.7s done
+#8 DONE 1.7s
+
+#9 [deliveries 4/4] COPY target/app.jar app.jar
+#9 CACHED
+
+#10 [orders internal] load build context
+#10 transferring context: 28.21MB 1.7s done
+#10 DONE 1.7s
+
+#11 [orders 2/4] RUN apk add --no-cache curl
+#11 CACHED
+
+#12 [orders 3/4] WORKDIR /app
+#12 CACHED
+
+#13 [orders 4/4] COPY target/app.jar app.jar
+#13 CACHED
+
+#14 [deliveries] exporting to image
+#14 exporting layers done
+#14 exporting manifest sha256:ab14d1a4ce2351eaf608ecf70fc1cd59ebcba54d6d16470159c234cacc191713 done
+#14 exporting config sha256:069e22bad416ce31147820f70b97657ee1581d97005af021052dee4af8fc0bf3 done
+#14 exporting attestation manifest sha256:fb20b770cb2d2997116f0ac16b6a5a1b7b506aa00c0fffa0a57c53e2f6a7ba03
+#14 exporting attestation manifest sha256:fb20b770cb2d2997116f0ac16b6a5a1b7b506aa00c0fffa0a57c53e2f6a7ba03 0.1s done
+#14 exporting manifest list sha256:9b456718ab5ec06e8395e1ddfebabb370cb15ce77721ee1d3512b51e2a72e46b 0.1s done
+#14 naming to docker.io/library/kashpirev-practice05-deliveries:latest 0.0s done
+#14 unpacking to docker.io/library/kashpirev-practice05-deliveries:latest
+#14 unpacking to docker.io/library/kashpirev-practice05-deliveries:latest 0.0s done
+#14 DONE 0.3s
+
+#15 [orders] exporting to image
+#15 exporting layers done
+#15 exporting manifest sha256:5e37ec41f94c4fee9340d6ef64690a53cbe4a87f1223354277f3a472697ba321 0.0s done
+#15 exporting config sha256:8db40372ef86bbaab242c6a64786ca920f94f46a0876c4bac5fc334330624240 0.0s done
+#15 exporting attestation manifest sha256:2d9ee9175c7101635801a82e36bda696e6c16f38bd5b6aadaf5f653f761a4dc3 0.1s done
+#15 exporting manifest list sha256:41078d6d061735a2f88aed52858436e167fc4c421b5e714a8ac03f40743300ad 0.0s done
+#15 naming to docker.io/library/kashpirev-practice05-orders:latest done
+#15 unpacking to docker.io/library/kashpirev-practice05-orders:latest 0.0s done
+#15 DONE 0.3s
+
+#16 [deliveries] resolving provenance for metadata file
+#16 DONE 0.0s
+
+#17 [orders] resolving provenance for metadata file
+#17 DONE 0.0s
+ Image kashpirev-practice05-orders Built 
+ Image kashpirev-practice05-deliveries Built 
+ Container kashpirev-practice05-traefik-1 Running 
+ Container kashpirev-practice05-orders-db-1 Recreate 
+ Container kashpirev-practice05-orders-db-1 Recreated 
+ Container kashpirev-practice05-orders-2 Recreate 
+ Container kashpirev-practice05-orders-1 Recreate 
+ Container kashpirev-practice05-orders-2 Recreated 
+ Container kashpirev-practice05-orders-1 Recreated 
+ Container kashpirev-practice05-deliveries-1 Recreate 
+ Container kashpirev-practice05-deliveries-1 Recreated 
+ Container kashpirev-practice05-orders-db-1 Starting 
+ Container kashpirev-practice05-orders-db-1 Started 
+ Container kashpirev-practice05-orders-db-1 Waiting 
+ Container kashpirev-practice05-orders-db-1 Healthy 
+ Container kashpirev-practice05-orders-1 Starting 
+ Container kashpirev-practice05-orders-1 Started 
+ Container kashpirev-practice05-orders-2 Starting 
+ Container kashpirev-practice05-orders-2 Started 
+ Container kashpirev-practice05-orders-1 Waiting 
+ Container kashpirev-practice05-orders-2 Waiting 
+ Container kashpirev-practice05-orders-1 Healthy 
+ Container kashpirev-practice05-orders-2 Healthy 
+ Container kashpirev-practice05-deliveries-1 Starting 
+ Container kashpirev-practice05-deliveries-1 Started 
+ Container kashpirev-practice05-orders-1 Waiting 
+ Container kashpirev-practice05-orders-2 Waiting 
+ Container kashpirev-practice05-deliveries-1 Waiting 
+ Container kashpirev-practice05-traefik-1 Waiting 
+ Container kashpirev-practice05-orders-db-1 Waiting 
+ Container kashpirev-practice05-orders-db-1 Healthy 
+ Container kashpirev-practice05-orders-1 Healthy 
+ Container kashpirev-practice05-orders-2 Healthy 
+ Container kashpirev-practice05-traefik-1 Healthy 
+ Container kashpirev-practice05-deliveries-1 Healthy 

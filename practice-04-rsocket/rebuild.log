@@ -1,0 +1,61 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------< ru.kashpirev:delivery-rsocket >--------------------
+[INFO] Building delivery-rsocket 1.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ delivery-rsocket ---
+[INFO] skip non existing resourceDirectory C:\Users\������\Documents\Codex\2026-10-04\plugin-browser-openai-bundled-x20\outputs\��������_��_����-11-23\practice-04-rsocket\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ delivery-rsocket ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 1 source file with javac [debug release 21] to target\classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ delivery-rsocket ---
+[INFO] skip non existing resourceDirectory C:\Users\������\Documents\Codex\2026-10-04\plugin-browser-openai-bundled-x20\outputs\��������_��_����-11-23\practice-04-rsocket\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ delivery-rsocket ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.2.5:test (default-test) @ delivery-rsocket ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- jar:3.4.1:jar (default-jar) @ delivery-rsocket ---
+[INFO] Building jar: C:\Users\������\Documents\Codex\2026-10-04\plugin-browser-openai-bundled-x20\outputs\��������_��_����-11-23\practice-04-rsocket\target\app.jar
+[INFO] 
+[INFO] --- dependency:3.6.1:copy-dependencies (default-cli) @ delivery-rsocket ---
+[INFO] Copying slf4j-simple-1.7.36.jar to C:\Users\������\Documents\Codex\2026-10-04\plugin-browser-openai-bundled-x20\outputs\��������_��_����-11-23\practice-04-rsocket\target\dependency\slf4j-simple-1.7.36.jar
+[INFO] io.rsocket:rsocket-core:jar:1.1.5 already exists in destination.
+[INFO] io.netty:netty-buffer:jar:4.1.117.Final already exists in destination.
+[INFO] io.netty:netty-common:jar:4.1.117.Final already exists in destination.
+[INFO] io.projectreactor:reactor-core:jar:3.4.41 already exists in destination.
+[INFO] org.reactivestreams:reactive-streams:jar:1.0.4 already exists in destination.
+[INFO] org.slf4j:slf4j-api:jar:1.7.36 already exists in destination.
+[INFO] io.rsocket:rsocket-transport-netty:jar:1.1.5 already exists in destination.
+[INFO] io.projectreactor.netty:reactor-netty-core:jar:1.0.48 already exists in destination.
+[INFO] io.netty:netty-handler:jar:4.1.112.Final already exists in destination.
+[INFO] io.netty:netty-resolver:jar:4.1.112.Final already exists in destination.
+[INFO] io.netty:netty-transport:jar:4.1.112.Final already exists in destination.
+[INFO] io.netty:netty-transport-native-unix-common:jar:4.1.112.Final already exists in destination.
+[INFO] io.netty:netty-codec:jar:4.1.112.Final already exists in destination.
+[INFO] io.netty:netty-handler-proxy:jar:4.1.112.Final already exists in destination.
+[INFO] io.netty:netty-codec-socks:jar:4.1.112.Final already exists in destination.
+[INFO] io.netty:netty-resolver-dns:jar:4.1.112.Final already exists in destination.
+[INFO] io.netty:netty-codec-dns:jar:4.1.112.Final already exists in destination.
+[INFO] io.netty:netty-resolver-dns-native-macos:jar:osx-x86_64:4.1.112.Final already exists in destination.
+[INFO] io.netty:netty-resolver-dns-classes-macos:jar:4.1.112.Final already exists in destination.
+[INFO] io.netty:netty-transport-native-epoll:jar:linux-x86_64:4.1.112.Final already exists in destination.
+[INFO] io.netty:netty-transport-classes-epoll:jar:4.1.112.Final already exists in destination.
+[INFO] io.projectreactor.netty:reactor-netty-http:jar:1.0.48 already exists in destination.
+[INFO] io.netty:netty-codec-http:jar:4.1.112.Final already exists in destination.
+[INFO] io.netty:netty-codec-http2:jar:4.1.112.Final already exists in destination.
+[INFO] com.fasterxml.jackson.core:jackson-databind:jar:2.18.2 already exists in destination.
+[INFO] com.fasterxml.jackson.core:jackson-annotations:jar:2.18.2 already exists in destination.
+[INFO] com.fasterxml.jackson.core:jackson-core:jar:2.18.2 already exists in destination.
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  6.663 s
+[INFO] Finished at: 2026-10-04T18:32:38+03:00
+[INFO] ------------------------------------------------------------------------

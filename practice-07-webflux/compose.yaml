@@ -1,0 +1,12 @@
+name: kashpirev-practice07
+services:
+  orders:
+    build: ./order-service
+    environment: {PORT: 8080}
+    healthcheck: {test: ["CMD", "curl", "-fsS", "http://localhost:8080/actuator/health"], interval: 5s, timeout: 3s, retries: 30, start_period: 30s}
+  deliveries:
+    build: .
+    environment: {PORT: 8080, ORDER_URL: "http://orders:8080"}
+    ports: ["127.0.0.1:8177:8080"]
+    depends_on: {orders: {condition: service_healthy}}
+    healthcheck: {test: ["CMD", "curl", "-fsS", "http://localhost:8080/actuator/health"], interval: 5s, timeout: 3s, retries: 30, start_period: 30s}

@@ -1,0 +1,326 @@
+ Image kashpirev-practice08-gateway Building 
+ Image kashpirev-practice08-supplier Building 
+ Image kashpirev-practice08-orders Building 
+ Image kashpirev-practice08-deliveries Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 3.11kB 0.0s done
+#1 DONE 0.0s
+
+#2 [orders internal] load build definition from Dockerfile
+#2 transferring dockerfile: 209B done
+#2 DONE 0.1s
+
+#3 [deliveries internal] load build definition from Dockerfile
+#3 transferring dockerfile: 209B done
+#3 DONE 0.1s
+
+#4 [orders internal] load metadata for docker.io/library/eclipse-temurin:21-jdk-alpine
+#4 ...
+
+#5 [supplier internal] load build definition from Dockerfile
+#5 transferring dockerfile: 209B done
+#5 DONE 0.1s
+
+#6 [gateway internal] load build definition from Dockerfile
+#6 transferring dockerfile: 209B done
+#6 DONE 0.2s
+
+#4 [gateway internal] load metadata for docker.io/library/eclipse-temurin:21-jdk-alpine
+#4 DONE 0.3s
+
+#7 [deliveries internal] load .dockerignore
+#7 transferring context: 66B done
+#7 DONE 0.0s
+
+#8 [orders internal] load .dockerignore
+#8 transferring context: 66B done
+#8 DONE 0.1s
+
+#9 [orders 1/4] FROM docker.io/library/eclipse-temurin:21-jdk-alpine@sha256:0bfc69a4758a86710e5c474032d28400a8bd00874766f9e8b1642ac2fd293159
+#9 resolve docker.io/library/eclipse-temurin:21-jdk-alpine@sha256:0bfc69a4758a86710e5c474032d28400a8bd00874766f9e8b1642ac2fd293159 0.0s done
+#9 resolve docker.io/library/eclipse-temurin:21-jdk-alpine@sha256:0bfc69a4758a86710e5c474032d28400a8bd00874766f9e8b1642ac2fd293159 0.0s done
+#9 DONE 0.1s
+
+#10 [gateway internal] load .dockerignore
+#10 transferring context: 66B done
+#10 DONE 0.1s
+
+#11 [supplier internal] load .dockerignore
+#11 transferring context: 66B done
+#11 DONE 0.2s
+
+#12 [supplier internal] load build context
+#12 ...
+
+#13 [gateway internal] load build context
+#13 transferring context: 26.43MB 2.6s done
+#13 DONE 2.7s
+
+#12 [supplier internal] load build context
+#12 ...
+
+#14 [gateway 3/4] WORKDIR /app
+#14 CACHED
+
+#15 [gateway 2/4] RUN apk add --no-cache curl
+#15 CACHED
+
+#16 [gateway 4/4] COPY target/app.jar app.jar
+#16 CACHED
+
+#12 [supplier internal] load build context
+#12 ...
+
+#17 [gateway] exporting to image
+#17 exporting layers done
+#17 exporting manifest sha256:465cdd396d3d0dadcf8113e4da0300e1fe3b4d768c7238a71e773f1a8001bde7 done
+#17 exporting config sha256:47578f49fd4dedf8a1ce2f4cd867d3f08d66e0afa9879798300855f926d9429e done
+#17 exporting attestation manifest sha256:ad820562fed74670613715e5fb0923f3be61009faa2c7cf34765a02b7f2aea5d 0.1s done
+#17 exporting manifest list sha256:3215b52223f646653dfcb66efbae0066dc72d5746e07431d3bbe5d2483f380e3 0.1s done
+#17 naming to docker.io/library/kashpirev-practice08-gateway:latest done
+#17 unpacking to docker.io/library/kashpirev-practice08-gateway:latest 0.0s done
+#17 DONE 0.4s
+
+#12 [supplier internal] load build context
+#12 ...
+
+#18 [gateway] resolving provenance for metadata file
+#18 DONE 0.0s
+
+#12 [supplier internal] load build context
+#12 ...
+
+#19 [orders internal] load build context
+#19 transferring context: 34.04MB 3.7s done
+#19 DONE 3.8s
+
+#14 [orders 3/4] WORKDIR /app
+#14 CACHED
+
+#15 [orders 2/4] RUN apk add --no-cache curl
+#15 CACHED
+
+#20 [orders 4/4] COPY target/app.jar app.jar
+#20 CACHED
+
+#12 [supplier internal] load build context
+#12 ...
+
+#21 [orders] exporting to image
+#21 exporting layers 0.0s done
+#21 exporting manifest sha256:b18504b6ea9ed41b6dc6e3d1ed5da300f38d332435a656372da462cdb0fdd716 done
+#21 exporting config sha256:b1d0748ce68dcf7ecc604f5bdd4562c535d757dfa86a007391c15558db8bbd3d done
+#21 exporting attestation manifest sha256:6338ccb90a13a766311333132567f7d94a8e9143b42ab82ba8a35030f702929a 0.1s done
+#21 exporting manifest list sha256:17176a66525bb4d5c9a587e650f2b88426a1489646a8657577fba9527ed39e51 0.1s done
+#21 naming to docker.io/library/kashpirev-practice08-orders:latest 0.0s done
+#21 unpacking to docker.io/library/kashpirev-practice08-orders:latest 0.1s done
+#21 DONE 0.5s
+
+#12 [supplier internal] load build context
+#12 transferring context: 28.20MB 4.2s done
+#12 DONE 4.3s
+
+#22 [supplier 4/4] COPY target/app.jar app.jar
+#22 CACHED
+
+#23 [deliveries internal] load build context
+#23 transferring context: 30.47MB 4.4s done
+#23 DONE 4.5s
+
+#15 [deliveries 2/4] RUN apk add --no-cache curl
+#15 CACHED
+
+#14 [deliveries 3/4] WORKDIR /app
+#14 CACHED
+
+#24 [deliveries 4/4] COPY target/app.jar app.jar
+#24 CACHED
+
+#25 [supplier] exporting to image
+#25 exporting layers done
+#25 exporting manifest sha256:9aa90f95f9e55fb372270993c38507688e5fa3a2b3b80ff93c71aae0e9c4d821 0.0s done
+#25 exporting config sha256:29e5125dea9c2263480e7b86b7e62a732434ff0228c64d9aa9202d95328d87e2 0.0s done
+#25 exporting attestation manifest sha256:828088374ef0efbbf360b735d868806785ccefff5794f2b58dcd2b94009b2c57
+#25 exporting attestation manifest sha256:828088374ef0efbbf360b735d868806785ccefff5794f2b58dcd2b94009b2c57 0.1s done
+#25 exporting manifest list sha256:5fff57f5fd7f2696ff9d9bc4bf7c357c09255a2aa882a221bebcef94961a54af
+#25 ...
+
+#26 [orders] resolving provenance for metadata file
+#26 DONE 0.0s
+
+#25 [supplier] exporting to image
+#25 exporting manifest list sha256:5fff57f5fd7f2696ff9d9bc4bf7c357c09255a2aa882a221bebcef94961a54af 0.1s done
+#25 naming to docker.io/library/kashpirev-practice08-supplier:latest 0.0s done
+#25 unpacking to docker.io/library/kashpirev-practice08-supplier:latest 0.1s done
+#25 DONE 0.5s
+
+#27 [deliveries] exporting to image
+#27 exporting layers done
+#27 exporting manifest sha256:0047e55e375fc5bf1d027bd64e1810cf2f40f6667e801aa655d8d92d109f793e 0.0s done
+#27 exporting config sha256:112f49fc3f43441cd206f9da6b52b5b0217a902322e213bd36cd21518495a2e2 0.0s done
+#27 exporting attestation manifest sha256:b08735258aac2345cdfcb50dc4e89cdd65b16e8d6d74c76694cc8414d9668cff 0.2s done
+#27 exporting manifest list sha256:b7a1ac2433de4f5bb8c8c1e8ecffc0fcd66b018ddce5e4a0fe9278bd116bf1aa 0.0s done
+#27 naming to docker.io/library/kashpirev-practice08-deliveries:latest done
+#27 unpacking to docker.io/library/kashpirev-practice08-deliveries:latest 0.0s done
+#27 DONE 0.4s
+
+#28 [supplier] resolving provenance for metadata file
+#28 DONE 0.1s
+
+#29 [deliveries] resolving provenance for metadata file
+#29 DONE 0.0s
+ Image kashpirev-practice08-orders Built 
+ Image kashpirev-practice08-supplier Built 
+ Image kashpirev-practice08-deliveries Built 
+ Image kashpirev-practice08-gateway Built 
+ Container kashpirev-practice08-broker-1 Running 
+ Container kashpirev-practice08-supplier-1 Recreate 
+ Container kashpirev-practice08-deliveries-1 Recreate 
+ Container kashpirev-practice08-orders-1 Recreate 
+ Container kashpirev-practice08-supplier-1 Recreated 
+ Container kashpirev-practice08-deliveries-1 Recreated 
+ Container kashpirev-practice08-orders-1 Recreated 
+ Container kashpirev-practice08-gateway-1 Recreate 
+ Container kashpirev-practice08-gateway-1 Recreated 
+ Container kashpirev-practice08-supplier-1 Starting 
+ Container kashpirev-practice08-broker-1 Waiting 
+ Container kashpirev-practice08-broker-1 Waiting 
+ Container kashpirev-practice08-supplier-1 Started 
+ Container kashpirev-practice08-broker-1 Healthy 
+ Container kashpirev-practice08-orders-1 Starting 
+ Container kashpirev-practice08-broker-1 Healthy 
+ Container kashpirev-practice08-deliveries-1 Starting 
+ Container kashpirev-practice08-deliveries-1 Started 
+ Container kashpirev-practice08-orders-1 Started 
+ Container kashpirev-practice08-orders-1 Waiting 
+ Container kashpirev-practice08-deliveries-1 Waiting 
+ Container kashpirev-practice08-supplier-1 Waiting 
+ Container kashpirev-practice08-supplier-1 Healthy 
+ Container kashpirev-practice08-deliveries-1 Healthy 
+ Container kashpirev-practice08-orders-1 Healthy 
+ Container kashpirev-practice08-gateway-1 Starting 
+ Container kashpirev-practice08-gateway-1 Started 
+ Container kashpirev-practice08-gateway-1 Waiting 
+ Container kashpirev-practice08-broker-1 Waiting 
+ Container kashpirev-practice08-supplier-1 Waiting 
+ Container kashpirev-practice08-orders-1 Waiting 
+ Container kashpirev-practice08-deliveries-1 Waiting 
+ Container kashpirev-practice08-broker-1 Healthy 
+ Container kashpirev-practice08-deliveries-1 Healthy 
+ Container kashpirev-practice08-orders-1 Healthy 
+ Container kashpirev-practice08-supplier-1 Healthy 
+ Container kashpirev-practice08-gateway-1 Healthy 
+[
+  {
+    "ID": 1,
+    "SUPPLIER_ID": 11,
+    "NAME": "SSD 1TB",
+    "PRICE": 7900.0,
+    "QUANTITY": 8
+  },
+  {
+    "ID": 2,
+    "SUPPLIER_ID": 22,
+    "NAME": "Monitor 27",
+    "PRICE": 21900.0,
+    "QUANTITY": 4
+  }
+]
+{
+  "ID": "b73d13eb-6acd-4646-86cf-66d483bfe570",
+  "PRODUCT_ID": 1,
+  "QUANTITY": 2,
+  "ADDRESS": "Moscow Akademicheskaya 12",
+  "TOTAL": 15800.0,
+  "STATUS": "CREATED",
+  "REQUEST_ID": "kashpirev-1123-1791128268",
+  "CREATED_AT": "2026-10-04T15:37:49.611002512Z"
+}
+[
+  {
+    "ORDER_ID": "b73d13eb-6acd-4646-86cf-66d483bfe570",
+    "EVENT_ID": "c5212757-dfc8-469d-bffd-a15da1d68087",
+    "ADDRESS": "Moscow Akademicheskaya 12",
+    "STATUS": "CREATED",
+    "REQUEST_ID": "kashpirev-1123-1791128268",
+    "SYNCED": true
+  }
+]
+{
+  "ORDER_ID": "b73d13eb-6acd-4646-86cf-66d483bfe570",
+  "EVENT_ID": "c5212757-dfc8-469d-bffd-a15da1d68087",
+  "ADDRESS": "Moscow Akademicheskaya 12",
+  "STATUS": "IN_TRANSIT",
+  "REQUEST_ID": "kashpirev-1123-1791128268",
+  "SYNCED": false
+}
+{
+  "ORDER_ID": "b73d13eb-6acd-4646-86cf-66d483bfe570",
+  "EVENT_ID": "c5212757-dfc8-469d-bffd-a15da1d68087",
+  "ADDRESS": "Moscow Akademicheskaya 12",
+  "STATUS": "DELIVERED",
+  "REQUEST_ID": "kashpirev-1123-1791128268",
+  "SYNCED": false
+}
+id:b73d13eb-6acd-4646-86cf-66d483bfe570:CREATED
+event:order-status
+data:{"ID":"b73d13eb-6acd-4646-86cf-66d483bfe570","PRODUCT_ID":1,"QUANTITY":2,"ADDRESS":"Moscow Akademicheskaya 12","TOTAL":15800.00,"STATUS":"CREATED","REQUEST_ID":"kashpirev-1123-1791128268","CREATED_AT":"2026-10-04T15:37:49.611002512Z"}
+
+id:b73d13eb-6acd-4646-86cf-66d483bfe570:DELIVERY_CREATED
+event:order-status
+data:{"ID":"b73d13eb-6acd-4646-86cf-66d483bfe570","PRODUCT_ID":1,"QUANTITY":2,"ADDRESS":"Moscow Akademicheskaya 12","TOTAL":15800.00,"STATUS":"DELIVERY_CREATED","REQUEST_ID":"kashpirev-1123-1791128268","CREATED_AT":"2026-10-04T15:37:49.611002512Z"}
+
+id:b73d13eb-6acd-4646-86cf-66d483bfe570:IN_TRANSIT
+event:order-status
+data:{"ID":"b73d13eb-6acd-4646-86cf-66d483bfe570","PRODUCT_ID":1,"QUANTITY":2,"ADDRESS":"Moscow Akademicheskaya 12","TOTAL":15800.00,"STATUS":"IN_TRANSIT","REQUEST_ID":"kashpirev-1123-1791128268","CREATED_AT":"2026-10-04T15:37:49.611002512Z"}
+
+id:b73d13eb-6acd-4646-86cf-66d483bfe570:DELIVERED
+event:order-status
+data:{"ID":"b73d13eb-6acd-4646-86cf-66d483bfe570","PRODUCT_ID":1,"QUANTITY":2,"ADDRESS":"Moscow Akademicheskaya 12","TOTAL":15800.00,"STATUS":"DELIVERED","REQUEST_ID":"kashpirev-1123-1791128268","CREATED_AT":"2026-10-04T15:37:49.611002512Z"}
+
+
+orders-1      | requestId=kashpirev-1123-1791128268 Order calling Supplier breaker=CLOSED
+orders-1      | requestId=kashpirev-1123-1791128268 OrderCreated saved outbox eventId=c5212757-dfc8-469d-bffd-a15da1d68087 orderId=b73d13eb-6acd-4646-86cf-66d483bfe570
+orders-1      | requestId=kashpirev-1123-1791128268 PUBLISHED OrderCreated eventId=c5212757-dfc8-469d-bffd-a15da1d68087 queue=order.created
+orders-1      | requestId=kashpirev-1123-1791128268 Order status=DELIVERY_CREATED id=b73d13eb-6acd-4646-86cf-66d483bfe570
+orders-1      | requestId=kashpirev-1123-1791128268 Order status=IN_TRANSIT id=b73d13eb-6acd-4646-86cf-66d483bfe570
+orders-1      | requestId=kashpirev-1123-1791128268 Order status=DELIVERED id=b73d13eb-6acd-4646-86cf-66d483bfe570
+gateway-1     | requestId=kashpirev-1123-1791128268 Gateway -> orders POST /api/orders
+deliveries-1  | requestId=kashpirev-1123-1791128268 CONSUMED OrderCreated eventId=c5212757-dfc8-469d-bffd-a15da1d68087 delivery orderId=b73d13eb-6acd-4646-86cf-66d483bfe570
+deliveries-1  | requestId=kashpirev-1123-1791128268 Delivery -> Order synchronized status=DELIVERY_CREATED
+gateway-1     | requestId=kashpirev-1123-1791128268 Gateway -> deliveries PUT /api/deliveries/b73d13eb-6acd-4646-86cf-66d483bfe570/status
+gateway-1     | requestId=kashpirev-1123-1791128268 Gateway -> deliveries PUT /api/deliveries/b73d13eb-6acd-4646-86cf-66d483bfe570/status
+deliveries-1  | requestId=kashpirev-1123-1791128268 Delivery -> Order synchronized status=IN_TRANSIT
+deliveries-1  | requestId=kashpirev-1123-1791128268 Delivery -> Order synchronized status=DELIVERED
+supplier-1    | requestId=kashpirev-1123-1791128268 Supplier lookup product=1
+Timeout: 60.0 seconds ...
+Listing queues for vhost / ...
+name	messages	messages_ready	messages_unacknowledged
+order.created	0	0	0
+ Container kashpirev-practice08-supplier-1 Stopping 
+ Container kashpirev-practice08-supplier-1 Stopped 
+{"timestamp":"2026-10-04T15:38:07.295+00:00","path":"/api/orders","status":503,"error":"Service Unavailable","requestId":"c0ef269e-11","message":"Supplier temporarily unavailable; retry later"}
+HTTP=503 elapsed=4.344071
+{"timestamp":"2026-10-04T15:38:07.333+00:00","path":"/api/orders","status":503,"error":"Service Unavailable","requestId":"c0ef269e-12","message":"Supplier temporarily unavailable; retry later"}
+HTTP=503 elapsed=0.017859
+{"timestamp":"2026-10-04T15:38:07.360+00:00","path":"/api/orders","status":503,"error":"Service Unavailable","requestId":"c0ef269e-13","message":"Supplier temporarily unavailable; retry later"}
+HTTP=503 elapsed=0.015332
+ Container kashpirev-practice08-supplier-1 Starting 
+ Container kashpirev-practice08-supplier-1 Started 
+{
+  "ID": "d743ad0d-1f7e-4f3a-9249-4c8e2100c80f",
+  "PRODUCT_ID": 1,
+  "QUANTITY": 1,
+  "ADDRESS": "Moscow",
+  "TOTAL": 7900.0,
+  "STATUS": "CREATED",
+  "REQUEST_ID": "kashpirev-1123-1791128268",
+  "CREATED_AT": "2026-10-04T15:38:16.619720934Z"
+}
+NAME                                IMAGE                             COMMAND                  SERVICE      CREATED          STATUS                    PORTS
+kashpirev-practice08-broker-1       rabbitmq:4-management-alpine      "docker-entrypoint.s…"   broker       4 minutes ago    Up 4 minutes (healthy)    4369/tcp, 5671-5672/tcp, 15671-15672/tcp, 15691-15692/tcp, 25672/tcp
+kashpirev-practice08-deliveries-1   kashpirev-practice08-deliveries   "java -Dfile.encodin…"   deliveries   50 seconds ago   Up 46 seconds (healthy)   
+kashpirev-practice08-gateway-1      kashpirev-practice08-gateway      "java -Dfile.encodin…"   gateway      48 seconds ago   Up 34 seconds (healthy)   127.0.0.1:8188->8080/tcp
+kashpirev-practice08-orders-1       kashpirev-practice08-orders       "java -Dfile.encodin…"   orders       50 seconds ago   Up 46 seconds (healthy)   
+kashpirev-practice08-supplier-1     kashpirev-practice08-supplier     "java -Dfile.encodin…"   supplier     50 seconds ago   Up 9 seconds (healthy)    
+

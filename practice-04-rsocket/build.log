@@ -1,0 +1,61 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------< ru.kashpirev:delivery-rsocket >--------------------
+[INFO] Building delivery-rsocket 1.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ delivery-rsocket ---
+[INFO] skip non existing resourceDirectory C:\Users\������\Documents\Codex\2026-10-04\plugin-browser-openai-bundled-x20\outputs\��������_��_����-11-23\practice-04-rsocket\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ delivery-rsocket ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 1 source file with javac [debug release 21] to target\classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ delivery-rsocket ---
+[INFO] skip non existing resourceDirectory C:\Users\������\Documents\Codex\2026-10-04\plugin-browser-openai-bundled-x20\outputs\��������_��_����-11-23\practice-04-rsocket\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ delivery-rsocket ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:3.2.5:test (default-test) @ delivery-rsocket ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- jar:3.4.1:jar (default-jar) @ delivery-rsocket ---
+[INFO] Building jar: C:\Users\������\Documents\Codex\2026-10-04\plugin-browser-openai-bundled-x20\outputs\��������_��_����-11-23\practice-04-rsocket\target\app.jar
+[INFO] 
+[INFO] --- dependency:3.6.1:copy-dependencies (default-cli) @ delivery-rsocket ---
+[INFO] Copying rsocket-core-1.1.5.jar to C:\Users\������\Documents\Codex\2026-10-04\plugin-browser-openai-bundled-x20\outputs\��������_��_����-11-23\practice-04-rsocket\target\dependency\rsocket-core-1.1.5.jar
+[INFO] Copying netty-buffer-4.1.117.Final.jar to C:\Users\������\Documents\Codex\2026-10-04\plugin-browser-openai-bundled-x20\outputs\��������_��_����-11-23\practice-04-rsocket\target\dependency\netty-buffer-4.1.117.Final.jar
+[INFO] Copying netty-common-4.1.117.Final.jar to C:\Users\������\Documents\Codex\2026-10-04\plugin-browser-openai-bundled-x20\outputs\��������_��_����-11-23\practice-04-rsocket\target\dependency\netty-common-4.1.117.Final.jar
+[INFO] Copying reactor-core-3.4.41.jar to C:\Users\������\Documents\Codex\2026-10-04\plugin-browser-openai-bundled-x20\outputs\��������_��_����-11-23\practice-04-rsocket\target\dependency\reactor-core-3.4.41.jar
+[INFO] Copying reactive-streams-1.0.4.jar to C:\Users\������\Documents\Codex\2026-10-04\plugin-browser-openai-bundled-x20\outputs\��������_��_����-11-23\practice-04-rsocket\target\dependency\reactive-streams-1.0.4.jar
+[INFO] Copying rsocket-transport-netty-1.1.5.jar to C:\Users\������\Documents\Codex\2026-10-04\plugin-browser-openai-bundled-x20\outputs\��������_��_����-11-23\practice-04-rsocket\target\dependency\rsocket-transport-netty-1.1.5.jar
+[INFO] Copying reactor-netty-core-1.0.48.jar to C:\Users\������\Documents\Codex\2026-10-04\plugin-browser-openai-bundled-x20\outputs\��������_��_����-11-23\practice-04-rsocket\target\dependency\reactor-netty-core-1.0.48.jar
+[INFO] Copying netty-handler-4.1.112.Final.jar to C:\Users\������\Documents\Codex\2026-10-04\plugin-browser-openai-bundled-x20\outputs\��������_��_����-11-23\practice-04-rsocket\target\dependency\netty-handler-4.1.112.Final.jar
+[INFO] Copying netty-resolver-4.1.112.Final.jar to C:\Users\������\Documents\Codex\2026-10-04\plugin-browser-openai-bundled-x20\outputs\��������_��_����-11-23\practice-04-rsocket\target\dependency\netty-resolver-4.1.112.Final.jar
+[INFO] Copying netty-transport-4.1.112.Final.jar to C:\Users\������\Documents\Codex\2026-10-04\plugin-browser-openai-bundled-x20\outputs\��������_��_����-11-23\practice-04-rsocket\target\dependency\netty-transport-4.1.112.Final.jar
+[INFO] Copying netty-transport-native-unix-common-4.1.112.Final.jar to C:\Users\������\Documents\Codex\2026-10-04\plugin-browser-openai-bundled-x20\outputs\��������_��_����-11-23\practice-04-rsocket\target\dependency\netty-transport-native-unix-common-4.1.112.Final.jar
+[INFO] Copying netty-codec-4.1.112.Final.jar to C:\Users\������\Documents\Codex\2026-10-04\plugin-browser-openai-bundled-x20\outputs\��������_��_����-11-23\practice-04-rsocket\target\dependency\netty-codec-4.1.112.Final.jar
+[INFO] Copying netty-handler-proxy-4.1.112.Final.jar to C:\Users\������\Documents\Codex\2026-10-04\plugin-browser-openai-bundled-x20\outputs\��������_��_����-11-23\practice-04-rsocket\target\dependency\netty-handler-proxy-4.1.112.Final.jar
+[INFO] Copying netty-codec-socks-4.1.112.Final.jar to C:\Users\������\Documents\Codex\2026-10-04\plugin-browser-openai-bundled-x20\outputs\��������_��_����-11-23\practice-04-rsocket\target\dependency\netty-codec-socks-4.1.112.Final.jar
+[INFO] Copying netty-resolver-dns-4.1.112.Final.jar to C:\Users\������\Documents\Codex\2026-10-04\plugin-browser-openai-bundled-x20\outputs\��������_��_����-11-23\practice-04-rsocket\target\dependency\netty-resolver-dns-4.1.112.Final.jar
+[INFO] Copying netty-codec-dns-4.1.112.Final.jar to C:\Users\������\Documents\Codex\2026-10-04\plugin-browser-openai-bundled-x20\outputs\��������_��_����-11-23\practice-04-rsocket\target\dependency\netty-codec-dns-4.1.112.Final.jar
+[INFO] Copying netty-resolver-dns-native-macos-4.1.112.Final-osx-x86_64.jar to C:\Users\������\Documents\Codex\2026-10-04\plugin-browser-openai-bundled-x20\outputs\��������_��_����-11-23\practice-04-rsocket\target\dependency\netty-resolver-dns-native-macos-4.1.112.Final-osx-x86_64.jar
+[INFO] Copying netty-resolver-dns-classes-macos-4.1.112.Final.jar to C:\Users\������\Documents\Codex\2026-10-04\plugin-browser-openai-bundled-x20\outputs\��������_��_����-11-23\practice-04-rsocket\target\dependency\netty-resolver-dns-classes-macos-4.1.112.Final.jar
+[INFO] Copying netty-transport-native-epoll-4.1.112.Final-linux-x86_64.jar to C:\Users\������\Documents\Codex\2026-10-04\plugin-browser-openai-bundled-x20\outputs\��������_��_����-11-23\practice-04-rsocket\target\dependency\netty-transport-native-epoll-4.1.112.Final-linux-x86_64.jar
+[INFO] Copying netty-transport-classes-epoll-4.1.112.Final.jar to C:\Users\������\Documents\Codex\2026-10-04\plugin-browser-openai-bundled-x20\outputs\��������_��_����-11-23\practice-04-rsocket\target\dependency\netty-transport-classes-epoll-4.1.112.Final.jar
+[INFO] Copying reactor-netty-http-1.0.48.jar to C:\Users\������\Documents\Codex\2026-10-04\plugin-browser-openai-bundled-x20\outputs\��������_��_����-11-23\practice-04-rsocket\target\dependency\reactor-netty-http-1.0.48.jar
+[INFO] Copying netty-codec-http-4.1.112.Final.jar to C:\Users\������\Documents\Codex\2026-10-04\plugin-browser-openai-bundled-x20\outputs\��������_��_����-11-23\practice-04-rsocket\target\dependency\netty-codec-http-4.1.112.Final.jar
+[INFO] Copying netty-codec-http2-4.1.112.Final.jar to C:\Users\������\Documents\Codex\2026-10-04\plugin-browser-openai-bundled-x20\outputs\��������_��_����-11-23\practice-04-rsocket\target\dependency\netty-codec-http2-4.1.112.Final.jar
+[INFO] Copying slf4j-simple-2.0.16.jar to C:\Users\������\Documents\Codex\2026-10-04\plugin-browser-openai-bundled-x20\outputs\��������_��_����-11-23\practice-04-rsocket\target\dependency\slf4j-simple-2.0.16.jar
+[INFO] org.slf4j:slf4j-api:jar:1.7.36 already exists in destination.
+[INFO] com.fasterxml.jackson.core:jackson-databind:jar:2.18.2 already exists in destination.
+[INFO] com.fasterxml.jackson.core:jackson-annotations:jar:2.18.2 already exists in destination.
+[INFO] com.fasterxml.jackson.core:jackson-core:jar:2.18.2 already exists in destination.
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  9.429 s
+[INFO] Finished at: 2026-10-04T18:02:49+03:00
+[INFO] ------------------------------------------------------------------------

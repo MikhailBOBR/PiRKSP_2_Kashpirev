@@ -1,0 +1,20 @@
+<!doctype html><html lang="ru"><meta charset="utf-8"><title>Практика 8 — Остановка и восстановление поставщика</title><style>body{margin:32px auto;max-width:1180px;padding:0 28px;font:18px Arial;color:#17252d;background:#f6f8fa}h1{font-size:30px;line-height:1.2}p{color:#465761}pre{white-space:pre-wrap;overflow-wrap:anywhere;font:17px/1.5 Consolas,monospace;background:white;padding:22px;border:1px solid #cad5dc}footer{font-size:15px}</style><h1>Практическая работа 8<br>Остановка и восстановление поставщика</h1><p>Кашпирев Михаил Дмитриевич · ИКБО-11-23</p><p>Протокол фактического запуска программы · 4 октября 2026</p><pre>Container kashpirev-practice08-supplier-1 Stopping 
+ Container kashpirev-practice08-supplier-1 Stopped 
+{&quot;timestamp&quot;:&quot;2026-10-04T15:38:07.295+00:00&quot;,&quot;path&quot;:&quot;/api/orders&quot;,&quot;status&quot;:503,&quot;error&quot;:&quot;Service Unavailable&quot;,&quot;requestId&quot;:&quot;c0ef269e-11&quot;,&quot;message&quot;:&quot;Supplier temporarily unavailable; retry later&quot;}
+HTTP=503 elapsed=4.344071
+{&quot;timestamp&quot;:&quot;2026-10-04T15:38:07.333+00:00&quot;,&quot;path&quot;:&quot;/api/orders&quot;,&quot;status&quot;:503,&quot;error&quot;:&quot;Service Unavailable&quot;,&quot;requestId&quot;:&quot;c0ef269e-12&quot;,&quot;message&quot;:&quot;Supplier temporarily unavailable; retry later&quot;}
+HTTP=503 elapsed=0.017859
+{&quot;timestamp&quot;:&quot;2026-10-04T15:38:07.360+00:00&quot;,&quot;path&quot;:&quot;/api/orders&quot;,&quot;status&quot;:503,&quot;error&quot;:&quot;Service Unavailable&quot;,&quot;requestId&quot;:&quot;c0ef269e-13&quot;,&quot;message&quot;:&quot;Supplier temporarily unavailable; retry later&quot;}
+HTTP=503 elapsed=0.015332
+ Container kashpirev-practice08-supplier-1 Starting 
+ Container kashpirev-practice08-supplier-1 Started 
+{
+  &quot;ID&quot;: &quot;d743ad0d-1f7e-4f3a-9249-4c8e2100c80f&quot;,
+  &quot;PRODUCT_ID&quot;: 1,
+  &quot;QUANTITY&quot;: 1,
+  &quot;ADDRESS&quot;: &quot;Moscow&quot;,
+  &quot;TOTAL&quot;: 7900.0,
+  &quot;STATUS&quot;: &quot;CREATED&quot;,
+  &quot;REQUEST_ID&quot;: &quot;kashpirev-1123-1791128268&quot;,
+  &quot;CREATED_AT&quot;: &quot;2026-10-04T15:38:16.619720934Z&quot;
+}</pre><footer>Исходные полные протоколы находятся рядом с проектом. Это представление сохранённого вывода программы.</footer></html>

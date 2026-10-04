@@ -1,0 +1,81 @@
+[main] Кашпирев Михаил Дмитриевич | ИКБО-11-23 | RxJava 3
+[RxCachedThreadScheduler-1] SOURCE SSD
+[RxCachedThreadScheduler-1] SOURCE Monitor
+[RxCachedThreadScheduler-1] SOURCE Router
+[RxCachedThreadScheduler-1] SOURCE BAD
+[RxCachedThreadScheduler-1] SOURCE Laptop
+[RxCachedThreadScheduler-1] SOURCE Dock
+[RxComputationThreadPool-1] VALUED Valued[supplierId=11, product=SSD, value=63200]
+[RxComputationThreadPool-1] VALUED Valued[supplierId=22, product=Monitor, value=87600]
+[RxComputationThreadPool-1] RECOVERED: Invalid BAD
+[RxComputationThreadPool-1] VALUED Valued[supplierId=33, product=Laptop, value=205500]
+[RxComputationThreadPool-1] VALUED Valued[supplierId=11, product=Dock, value=59500]
+[main] SUMMARY supplier=11 total=122700
+[main] SUMMARY supplier=22 total=87600
+[main] SUMMARY supplier=33 total=205500
+[main] LIVE: новый объект каждые 180 ms; окна по 3 объекта
+[RxComputationThreadPool-2] ARRIVAL SSD
+[RxCachedThreadScheduler-1] VALUED Valued[supplierId=11, product=SSD, value=63200]
+[RxComputationThreadPool-2] ARRIVAL Monitor
+[RxCachedThreadScheduler-1] VALUED Valued[supplierId=22, product=Monitor, value=87600]
+[RxComputationThreadPool-2] ARRIVAL Router
+[RxComputationThreadPool-2] ARRIVAL BAD
+[RxCachedThreadScheduler-1] RECOVERED: Invalid BAD
+[RxComputationThreadPool-2] ARRIVAL Laptop
+[RxCachedThreadScheduler-1] VALUED Valued[supplierId=33, product=Laptop, value=205500]
+[main] WINDOW count=3 total=356300
+[RxComputationThreadPool-2] ARRIVAL Dock
+[RxCachedThreadScheduler-1] VALUED Valued[supplierId=11, product=Dock, value=59500]
+[main] WINDOW count=1 total=59500
+[main] FLOWABLE: 500 событий / 1 ms, обработчик 12 ms, буфер 8, стратегия latest
+[RxComputationThreadPool-3] FAST SOURCE 0
+[RxSingleScheduler-1] SLOW CONSUMER 0
+[RxSingleScheduler-1] SLOW CONSUMER 1
+[RxSingleScheduler-1] SLOW CONSUMER 2
+[RxSingleScheduler-1] SLOW CONSUMER 3
+[RxSingleScheduler-1] SLOW CONSUMER 4
+[RxSingleScheduler-1] SLOW CONSUMER 5
+[RxSingleScheduler-1] SLOW CONSUMER 6
+[RxComputationThreadPool-3] FAST SOURCE 100
+[RxSingleScheduler-1] SLOW CONSUMER 7
+[RxSingleScheduler-1] SLOW CONSUMER 66
+[RxSingleScheduler-1] SLOW CONSUMER 67
+[RxSingleScheduler-1] SLOW CONSUMER 68
+[RxSingleScheduler-1] SLOW CONSUMER 69
+[RxSingleScheduler-1] SLOW CONSUMER 70
+[RxSingleScheduler-1] SLOW CONSUMER 71
+[RxSingleScheduler-1] SLOW CONSUMER 143
+[RxComputationThreadPool-3] FAST SOURCE 200
+[RxSingleScheduler-1] SLOW CONSUMER 144
+[RxSingleScheduler-1] SLOW CONSUMER 145
+[RxSingleScheduler-1] SLOW CONSUMER 146
+[RxSingleScheduler-1] SLOW CONSUMER 147
+[RxSingleScheduler-1] SLOW CONSUMER 148
+[RxSingleScheduler-1] SLOW CONSUMER 221
+[RxSingleScheduler-1] SLOW CONSUMER 222
+[RxSingleScheduler-1] SLOW CONSUMER 223
+[RxSingleScheduler-1] SLOW CONSUMER 224
+[RxComputationThreadPool-3] FAST SOURCE 300
+[RxSingleScheduler-1] SLOW CONSUMER 225
+[RxSingleScheduler-1] SLOW CONSUMER 226
+[RxSingleScheduler-1] SLOW CONSUMER 299
+[RxSingleScheduler-1] SLOW CONSUMER 300
+[RxSingleScheduler-1] SLOW CONSUMER 301
+[RxSingleScheduler-1] SLOW CONSUMER 302
+[RxComputationThreadPool-3] FAST SOURCE 400
+[RxSingleScheduler-1] SLOW CONSUMER 303
+[RxSingleScheduler-1] SLOW CONSUMER 304
+[RxSingleScheduler-1] SLOW CONSUMER 392
+[RxSingleScheduler-1] SLOW CONSUMER 393
+[RxSingleScheduler-1] SLOW CONSUMER 394
+[RxSingleScheduler-1] SLOW CONSUMER 395
+[RxSingleScheduler-1] SLOW CONSUMER 396
+[RxSingleScheduler-1] SLOW CONSUMER 397
+[RxSingleScheduler-1] SLOW CONSUMER 456
+[RxSingleScheduler-1] SLOW CONSUMER 457
+[RxSingleScheduler-1] SLOW CONSUMER 458
+[RxSingleScheduler-1] SLOW CONSUMER 459
+[RxSingleScheduler-1] SLOW CONSUMER 460
+[RxSingleScheduler-1] SLOW CONSUMER 461
+[RxSingleScheduler-1] SLOW CONSUMER 499
+[main] BACKPRESSURE COMPLETE produced=500 received=45 superseded=455
