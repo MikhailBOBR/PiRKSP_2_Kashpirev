@@ -1,0 +1,292 @@
+- generic: 
+- generic: Welcome to the new home of Remix. Bookmark app.remix.live so you always land here.
+- link "Still need your files from remix.ethereum.org?":
+  - /url: https://remix.ethereum.org/?nomigrationredirect
+- button "Dismiss":
+  - generic: 
+- generic: 
+- generic: You can use 'Generate documentation' in the right-click menu to get AI-generated documentation.
+- button "Dismiss":
+  - generic: 
+- generic: Remix
+- generic: 2.6.5
+- button "- none -  ":
+  - generic: "- none -"
+  - generic:  
+- generic: AI
+- generic: 
+- generic: Code
+- generic: 
+- generic: 
+- generic: 
+- button "Sign In":
+  - generic: Sign In
+- generic: 
+- generic: "1"
+- generic: 
+- img "remixaiassistant"
+- img "remixaiassistant"
+- generic: AI
+- img "filePanel"
+- generic: Files
+- img "search"
+- generic: Search
+- img "solidity"
+- generic: 
+- generic: Compile
+- img "udapp"
+- generic: Deploy
+- img "quick-dapp-v2"
+- generic: Frontend
+- img "pluginManager"
+- generic: Plugins
+- img "dgit"
+- img "planManager"
+- img "helpPlugin"
+- button:
+  - generic: 
+- heading "Deploy & run transactions" [level=6]
+- text: 
+- text:                                                                    +  +                                          +          
+- heading "Environment" [level=6]
+- button " Fork":
+  - generic: 
+  - text: Fork
+- button " Reset":
+  - generic: 
+  - text: Reset
+- generic: Remix VM
+- generic: 
+- button "Osaka ":
+  - generic: Osaka
+  - generic: 
+- button "Account 1  0x5B3...eddC4  99.999 ETH":
+  - generic: Account 1
+  - generic: 
+  - text: 0x5B3...eddC4
+  - generic: 
+  - generic: 99.999 ETH
+  - text: 
+- tablist:
+  - tab "Deploy"
+  - tab "Deployed Contracts 1" [selected]:
+    - text: Deployed Contracts
+    - generic: "1"
+  - tab "Transaction History 2":
+    - text: Transaction History
+    - generic: "2"
+- text:    
+- heading "Deployed Contracts" [level=6]
+- generic: "1"
+- button "+ Add Contract":
+  - generic: +
+  - generic: Add Contract
+- button:
+  - generic: 
+- paragraph: Interact with a deployed contract
+- generic: 
+- generic: DeliveryLedger
+- generic: 0xd91...39138
+- generic: 
+- generic: Remix VM
+- generic: 57s ago
+- generic: 
+- paragraph: Functions
+- generic: 
+- textbox "Search functions...": getDelivery
+- generic "call"
+- generic "getDelivery"
+- generic: (uint256)
+- button "Call" [active]
+- textbox "id (uint256)": "1"
+- button "Calldata ":
+  - generic: Calldata
+  - generic: 
+- button "Params ":
+  - generic: Params
+  - generic: 
+- button "Remix AI Auto-Fill with AI Samples":
+  - img "Remix AI"
+  - text: Auto-Fill with AI Samples
+- list:
+  - generic: "0:"
+  - generic: "tuple(uint256,address,address,uint256,uint8): 101,0x5B38Da6a701c568545dCfcB03FcB875f56beddC4,0x0000000000000000000000000000000000000000,63200,0"
+- paragraph: Low level interaction
+- generic: +
+- generic: Value
+- spinbutton: "0"
+- button "wei ":
+  - generic: wei
+  - generic: 
+- generic: Gas limit
+- generic: auto
+- spinbutton [disabled]: "0"
+- generic: Balance
+- generic: 0 ETH
+- text:    
+- group "compile group":
+  - button " Compiled":
+    - generic: 
+    - generic: Compiled
+- button "":
+  - generic: 
+- generic: 
+- generic: 
+- tablist:
+  - tab "Home":
+    - generic: Home
+  - tab " DeliveryLedger.sol " [selected]:
+    - generic: 
+    - generic: DeliveryLedger.sol
+    - generic: 
+- tabpanel "Home"
+- tabpanel " DeliveryLedger.sol "
+- code:
+  - generic: "1"
+  - generic: "2"
+  - generic: "3"
+  - generic: "4"
+  - generic: "5"
+  - generic: 
+  - generic: "6"
+  - generic: "7"
+  - generic: "8"
+  - generic: "9"
+  - generic: "10"
+  - generic: "11"
+  - generic: "12"
+  - generic: "13"
+  - generic: "14"
+  - generic: "15"
+  - generic: "16"
+  - generic: "17"
+  - generic: "18"
+  - generic: "19"
+  - generic: "20"
+  - generic: "21"
+  - generic: 
+  - generic: "22"
+  - generic: "23"
+  - generic: "24"
+  - generic: "25"
+  - generic: "26"
+  - generic: "27"
+  - generic: "28"
+  - generic: "29"
+  - generic: "// SPDX-License-Identifier: MIT"
+  - generic: pragma solidity ^0.8.24;
+  - generic: /// @title DeliveryLedger — Кашпирев Михаил Дмитриевич, ИКБО-11-23
+  - generic: /// @notice Учебный реестр доставки. price — справочное значение, переводов ETH нет.
+  - generic: "contract DeliveryLedger {"
+  - generic: "enum Status { Created, Accepted, InTransit, Delivered, Cancelled }"
+  - generic: "struct Delivery { uint256 orderId; address customer; address courier; uint256 price; Status status; }"
+  - generic: address public immutable operator;
+  - generic: uint256 public nextId = 1;
+  - generic: mapping(uint256 => Delivery) private deliveries;
+  - generic: mapping(uint256 => bool) public orderRegistered;
+  - generic: error Unauthorized();
+  - generic: error UnknownDelivery(uint256 id);
+  - generic: error InvalidTransition(Status actual, Status expected);
+  - generic: event DeliveryCreated(uint256 indexed deliveryId, uint256 indexed orderId, address indexed customer, uint256 price);
+  - generic: event CourierAssigned(uint256 indexed deliveryId, address indexed courier);
+  - generic: event DeliveryStatusChanged(uint256 indexed deliveryId, Status previous, Status current);
+  - generic: "constructor() { operator = msg.sender; }"
+  - text: "modifier exists(uint256 id) { if(deliveries[id].customer == address(0)) revert UnknownDelivery(id); _; }"
+  - generic: 
+  - text: infinite gas 1115600 gas
+  - generic: "modifier onlyCourier(uint256 id) { if(msg.sender != deliveries[id].courier) revert Unauthorized(); _; }"
+  - text: "function createDelivery(uint256 orderId, uint256 price) external returns(uint256 id) {"
+  - generic: 
+  - text: infinite gas
+  - generic: require(orderId > 0 && price > 0, "Positive order and price required");
+  - generic: require(!orderRegistered[orderId], "Order already registered");
+  - generic: id = nextId++;
+  - generic: deliveries[id] = Delivery(orderId, msg.sender, address(0), price, Status.Created);
+  - generic: orderRegistered[orderId] = true;
+  - generic: emit DeliveryCreated(id, orderId, msg.sender, price);
+  - generic: "}"
+  - textbox "Editor content;Press Alt+F1 for Accessibility Options.": "// SPDX-License-Identifier: MIT pragma solidity ^0.8.24; /// @title DeliveryLedger — Кашпирев Михаил Дмитриевич, ИКБО-11-23 /// @notice Учебный реестр доставки. price — справочное значение, переводов ETH нет. contract DeliveryLedger { enum Status { Created, Accepted, InTransit, Delivered, Cancelled } struct Delivery { uint256 orderId; address customer; address courier; uint256 price; Status status; } address public immutable operator; uint256 public nextId = 1;"
+- button "AI tools":
+  - img "AI tools"
+- text: +                   
+- button "Remix AI Explain contract":
+  - img "Remix AI"
+  - generic: Explain contract
+- generic: AI copilot
+- checkbox [checked]
+- generic: "0"
+- checkbox "Listen on all transactions" [disabled]
+- generic: Listen on all transactions
+- generic: 
+- textbox "Filter with transaction hash or address"
+- generic: 
+- generic: 
+- generic: 
+- generic: Welcome to Remix 2.6.5
+- generic: Your files are stored in indexedDB, 32.42 KB / 10 GB used
+- generic: "You can use this terminal to:"
+- list:
+  - listitem: Check transactions details and start debugging.
+  - text: "Execute JavaScript scripts:"
+  - generic: "- Input a script directly in the command line interface"
+  - generic: "- Select a Javascript file in the file explorer and then run `remix.execute()` or `remix.exeCurrent()` in the command line interface"
+  - generic: "- Right-click on a JavaScript file in the file explorer and then click `Run`"
+- generic: "The following libraries are accessible:"
+- list:
+  - link "ethers.js":
+    - /url: https://docs.ethers.io
+- generic: Type the library name to see available commands.
+- generic: 
+- generic: "[vm]"
+- generic: "from:"
+- generic: 0x5B3...eddC4
+- generic: "to:"
+- generic: DeliveryLedger.(constructor)
+- generic: "value:"
+- generic: 0 wei
+- generic: "data:"
+- generic: 0x60a...20033
+- generic: "logs:"
+- generic: "0"
+- generic: "hash:"
+- generic: 0xe1f...20165
+- generic: Debug
+- generic: 
+- generic: 
+- generic: "[vm]"
+- generic: "from:"
+- generic: 0x5B3...eddC4
+- generic: "to:"
+- generic: DeliveryLedger.createDelivery(uint256,uint256) 0xd91...39138
+- generic: "value:"
+- generic: 0 wei
+- generic: "data:"
+- generic: 0x032...0f6e0
+- generic: "logs:"
+- generic: "1"
+- generic: "hash:"
+- generic: 0x35b...59fff
+- generic: Debug
+- generic: 
+- generic: call
+- generic: "[call]"
+- generic: "from:"
+- generic: "0x5B38Da6a701c568545dCfcB03FcB875f56beddC4"
+- generic: "to:"
+- generic: DeliveryLedger.getDelivery(uint256)
+- generic: "data:"
+- generic: 0xde8...00001
+- generic: Debug
+- generic: 
+- text: ">"
+- textbox
+- text:    +     
+- generic: 
+- generic: 
+- generic: Scam Alert
+- generic: Initialize as git repo
+- generic: RemixAI Copilot (disabled)
+- region "Notifications alt+T"
+- text:  
+- alert
+- alert

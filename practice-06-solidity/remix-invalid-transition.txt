@@ -1,0 +1,192 @@
+- generic: 
+- generic: Welcome to the new home of Remix. Bookmark app.remix.live so you always land here.
+- link "Still need your files from remix.ethereum.org?":
+  - /url: https://remix.ethereum.org/?nomigrationredirect
+- button "Dismiss":
+  - generic: 
+- generic: 
+- generic: You can use 'Generate documentation' in the right-click menu to get AI-generated documentation.
+- button "Dismiss":
+  - generic: 
+- generic: Remix
+- generic: 2.6.5
+- button "- none -  ":
+  - generic: "- none -"
+  - generic:  
+- generic: AI
+- generic: 
+- generic: Code
+- generic: 
+- generic: 
+- generic: 
+- button "Sign In":
+  - generic: Sign In
+- generic: 
+- generic: "1"
+- generic: 
+- img "remixaiassistant"
+- img "remixaiassistant"
+- generic: AI
+- img "filePanel"
+- generic: Files
+- img "search"
+- generic: Search
+- img "solidity"
+- generic: 
+- generic: Compile
+- img "udapp"
+- generic: Deploy
+- img "quick-dapp-v2"
+- generic: Frontend
+- img "pluginManager"
+- generic: Plugins
+- img "dgit"
+- img "planManager"
+- img "helpPlugin"
+- button:
+  - generic: 
+- heading "Deploy & run transactions" [level=6]
+- text: 
+- text:                                                                    +  +                                          +          
+- heading "Environment" [level=6]
+- button " Fork":
+  - generic: 
+  - text: Fork
+- button " Reset":
+  - generic: 
+  - text: Reset
+- generic: Remix VM
+- generic: 
+- button "Osaka ":
+  - generic: Osaka
+  - generic: 
+- button "Account 2  0xAb8...35cb2  99.999 ETH":
+  - generic: Account 2
+  - generic: 
+  - text: 0xAb8...35cb2
+  - generic: 
+  - generic: 99.999 ETH
+  - text: 
+- text:                              
+- tablist:
+  - tab "Deploy"
+  - tab "Deployed Contracts 1" [selected]:
+    - text: Deployed Contracts
+    - generic: "1"
+  - tab "Transaction History 5":
+    - text: Transaction History
+    - generic: "5"
+- text:    
+- heading "Deployed Contracts" [level=6]
+- generic: "1"
+- button "+ Add Contract":
+  - generic: +
+  - generic: Add Contract
+- button:
+  - generic: 
+- paragraph: Interact with a deployed contract
+- generic: 
+- generic: DeliveryLedger
+- generic: 0xd91...39138
+- generic: 
+- generic: Remix VM
+- generic: 2min ago
+- generic: 
+- paragraph: Functions
+- generic: 
+- textbox "Search functions...": completeDelivery
+- generic "non-payable"
+- generic "completeDelivery"
+- generic: (uint256)
+- textbox "id (uint256)": "1"
+- button "Transact" [active]
+- button "Calldata ":
+  - generic: Calldata
+  - generic: 
+- button "Params ":
+  - generic: Params
+  - generic: 
+- button "Remix AI Auto-Fill with AI Samples":
+  - img "Remix AI"
+  - text: Auto-Fill with AI Samples
+- paragraph: Low level interaction
+- generic: +
+- generic: Value
+- spinbutton: "0"
+- button "wei ":
+  - generic: wei
+  - generic: 
+- generic: Gas limit
+- generic: auto
+- spinbutton [disabled]: "0"
+- generic: Balance
+- generic: 0 ETH
+- text:    
+- text:       +                   
+- generic: "0"
+- checkbox "Listen on all transactions" [disabled]
+- generic: Listen on all transactions
+- generic: 
+- textbox "Filter with transaction hash or address"
+- generic: 
+- generic: 
+- generic: 
+- generic: Welcome to Remix 2.6.5
+- generic: Your files are stored in indexedDB, 32.42 KB / 10 GB used
+- generic: "You can use this terminal to:"
+- list:
+  - listitem: Check transactions details and start debugging.
+  - text: "Execute JavaScript scripts:"
+  - generic: "- Input a script directly in the command line interface"
+  - generic: "- Select a Javascript file in the file explorer and then run `remix.execute()` or `remix.exeCurrent()` in the command line interface"
+  - generic: "- Right-click on a JavaScript file in the file explorer and then click `Run`"
+- generic: "The following libraries are accessible:"
+- list:
+  - link "ethers.js":
+    - /url: https://docs.ethers.io
+- generic: Type the library name to see available commands.
+- generic: 
+- generic: Debug
+- generic: 
+- generic: 
+- generic: Debug
+- generic: 
+- generic: call
+- generic: Debug
+- generic: 
+- generic: 
+- generic: Debug
+- generic: 
+- generic: 
+- generic: Debug
+- generic: 
+- generic: "transact to DeliveryLedger.completeDelivery errored: Error occurred: Error occurred: revert. revert The transaction has been reverted to the initial state. Error provided by the contract: Unauthorized Parameters: {} If the transaction failed for not having enough gas, try increasing the gas limit gently.. Error occurred: revert. revert The transaction has been reverted to the initial state. Error provided by the contract: Unauthorized Parameters: {} If the transaction failed for not having enough gas, try increasing the gas limit gently. If the transaction failed for not having enough gas, try increasing the gas limit gently."
+- generic: 
+- generic: "[vm]"
+- generic: "from:"
+- generic: 0xAb8...35cb2
+- generic: "to:"
+- generic: DeliveryLedger.completeDelivery(uint256) 0xd91...39138
+- generic: "value:"
+- generic: 0 wei
+- generic: "data:"
+- generic: 0x82c...00001
+- generic: "logs:"
+- generic: "0"
+- generic: "hash:"
+- generic: 0x2ea...0d37f
+- generic: Debug
+- generic: 
+- generic: "transact to DeliveryLedger.completeDelivery errored: Error occurred: Error occurred: revert. revert The transaction has been reverted to the initial state. Error provided by the contract: InvalidTransition Parameters: { \"actual\": { \"value\": \"1\" }, \"expected\": { \"value\": \"2\" } } If the transaction failed for not having enough gas, try increasing the gas limit gently.. Error occurred: revert. revert The transaction has been reverted to the initial state. Error provided by the contract: InvalidTransition Parameters: { \"actual\": { \"value\": \"1\" }, \"expected\": { \"value\": \"2\" } } If the transaction failed for not having enough gas, try increasing the gas limit gently. If the transaction failed for not having enough gas, try increasing the gas limit gently."
+- text: ">"
+- textbox
+- text:    +     
+- generic: 
+- generic: 
+- generic: Scam Alert
+- generic: Initialize as git repo
+- generic: RemixAI Copilot (disabled)
+- region "Notifications alt+T"
+- text:  
+- alert
+- alert

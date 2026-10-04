@@ -1,0 +1,68 @@
+- main:
+  - link:
+    - /url: /course/1178
+  - navigation:
+    - list:
+      - link "Моё обучение":
+        - /url: /course/1178
+      - link "Проверка заданий":
+        - /url: /btc/tasks/todos
+      - link "Сертификаты":
+        - /url: /certificates
+  - link "48":
+    - /url: /notifications
+    - text: "48"
+  - paragraph: Моё обучение
+  - generic: Создание ИТ-сервиса в облачной инфраструктуре Bootcamplabs
+  - combobox
+  - generic: 1 октября - 30 декабря
+  - generic: 100%
+  - generic: Создание ИТ-сервиса в облачной инфраструктуре Bootcamplabs
+  - link "Начни с меня 😎 BootcampLabs 1 Модуль завершён 2.0":
+    - /url: /trajectory/73094?courseId=1178
+    - generic: Начни с меня 😎 BootcampLabs
+    - generic: "1"
+    - text: Модуль завершён
+    - generic: "2.0"
+  - link "Знакомство с учебным примером 2 Модуль завершён 2.0":
+    - /url: /trajectory/73095?courseId=1178
+    - generic: Знакомство с учебным примером
+    - generic: "2"
+    - text: Модуль завершён
+    - generic: "2.0"
+  - link "База данных АС Поставщиков 3 Модуль завершён 4.0":
+    - /url: /trajectory/70822?courseId=1178
+    - generic: База данных АС Поставщиков
+    - generic: "3"
+    - text: Модуль завершён
+    - generic: "4.0"
+  - link "Back-end АС Поставщиков 4 Модуль завершён 4.0":
+    - /url: /trajectory/70830?courseId=1178
+    - generic: Back-end АС Поставщиков
+    - generic: "4"
+    - text: Модуль завершён
+    - generic: "4.0"
+  - link "Front-end АС Поставщиков 5 Модуль завершён 4.0":
+    - /url: /trajectory/70831?courseId=1178
+    - generic: Front-end АС Поставщиков
+    - generic: "5"
+    - text: Модуль завершён
+    - generic: "4.0"
+  - link "BaaS для АС сервиса доставки 6 Модуль завершён 4.0":
+    - /url: /trajectory/70832?courseId=1178
+    - generic: BaaS для АС сервиса доставки
+    - generic: "6"
+    - text: Модуль завершён
+    - generic: "4.0"
+  - link "Доступы и front-end АС сервиса доставки 7 Модуль завершён 3.0":
+    - /url: /trajectory/70833?courseId=1178
+    - generic: Доступы и front-end АС сервиса доставки
+    - generic: "7"
+    - text: Модуль завершён
+    - generic: "3.0"
+  - link "Обратная связь о процессе обучения 🙌 BootcampLabs 8 Модуль завершён 2.0":
+    - /url: /trajectory/73789?courseId=1178
+    - generic: Обратная связь о процессе обучения 🙌 BootcampLabs
+    - generic: "8"
+    - text: Модуль завершён
+    - generic: "2.0"

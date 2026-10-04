@@ -1,0 +1,21 @@
+Проверка DeliveryLedger в Remix IDE 2.6.5 — 2026-10-04
+Это сводка фактических действий интерфейса; полные снимки состояния находятся в remix-*.txt.
+Compiler: Solidity 0.8.34+commit.80d5c536
+Environment: Remix VM, Osaka. Value: 0 wei. Реальная сеть и кошелёк не использовались.
+Account 1 (operator/customer): 0x5B38Da6a701c568545dCfcB03FcB875f56beddC4
+Account 2 (courier): 0xAb8483F64d9C6d1EcF9b849Ae677dD3315835cb2
+Адрес контракта, как сокращённо показан интерфейсом: 0xd91...39138
+
+1. DeliveryLedger constructor: SUCCESS, logs 0, hash 0xe1f...20165
+2. Account 1 createDelivery(101,63200): SUCCESS, logs 1, hash 0x35b...59fff
+3. getDelivery(1): [101, Account 1, 0x0000000000000000000000000000000000000000,63200,0]
+4. Account 1 assignCourier(1,Account 2): SUCCESS, logs 2, hash 0xa2e...87070
+5. Account 1 completeDelivery(1): EXPECTED REVERT Unauthorized, logs 0, hash 0x982...9744a
+6. Account 2 completeDelivery(1) до начала доставки: EXPECTED REVERT InvalidTransition(actual=1,expected=2), logs 0, hash 0x2ea...0d37f
+7. Account 2 startDelivery(1): SUCCESS, logs 1, hash 0x9c0...8eca2
+8. Account 2 completeDelivery(1): SUCCESS, logs 1, hash 0x859...01171
+9. getDelivery(1): [101,0x5B38Da6a701c568545dCfcB03FcB875f56beddC4,0xAb8483F64d9C6d1EcF9b849Ae677dD3315835cb2,63200,3]
+10. Account 1 cancelDelivery(1): EXPECTED REVERT "Delivery already started", logs 0, hash 0x194...e3baa
+
+Хеши выше намеренно записаны в сокращённом виде, в котором они были показаны консолью Remix.
+status 0=Created,1=Accepted,2=InTransit,3=Delivered,4=Cancelled.
